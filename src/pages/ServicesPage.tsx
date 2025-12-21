@@ -51,7 +51,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-muted relative">
         <div className="container">
           <div className="max-w-3xl">
             <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Our Services</span>
@@ -64,10 +64,12 @@ export default function ServicesPage() {
             </p>
           </div>
         </div>
+        {/* Smooth fade to white */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-background" />
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
@@ -93,13 +95,16 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Transition to green CTA */}
+      <div className="h-32 md:h-40 section-fade-white-to-green" />
+
       {/* CTA */}
-      <section className="py-20 bg-gradient-hero text-white">
+      <section className="py-20 bg-primary text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
             Need a Custom Solution?
           </h2>
-          <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">
             Every job is different. Contact us to discuss your specific requirements 
             and get a tailored quote.
           </p>
@@ -107,7 +112,7 @@ export default function ServicesPage() {
             <Button variant="white" size="lg" asChild>
               <Link to="/contact">Get Free Quote</Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary" asChild>
+            <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
               <a href="tel:+447123456789">Call: 07123 456 789</a>
             </Button>
           </div>

@@ -73,7 +73,7 @@ export default function PricingPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-muted relative">
         <div className="container">
           <div className="max-w-3xl">
             <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Pricing</span>
@@ -86,10 +86,11 @@ export default function PricingPage() {
             </p>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-background" />
       </section>
 
       {/* Van Illustration */}
-      <section className="py-12 border-b border-border">
+      <section className="py-12 border-b border-border bg-background">
         <div className="container">
           <div className="flex items-center justify-center gap-4 text-muted-foreground">
             <Truck className="h-8 w-8 text-primary" />
@@ -99,7 +100,7 @@ export default function PricingPage() {
       </section>
 
       {/* Pricing Grid */}
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {pricingTiers.map((tier) => (
@@ -112,7 +113,7 @@ export default function PricingPage() {
                 }`}
               >
                 {tier.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-secondary text-white text-xs font-bold rounded-full">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-secondary text-secondary-foreground text-xs font-bold rounded-full">
                     MOST POPULAR
                   </div>
                 )}
@@ -144,6 +145,9 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* Transition to muted FAQs */}
+      <div className="h-24 bg-gradient-to-b from-background to-muted" />
+
       {/* FAQs */}
       <section className="py-20 bg-muted">
         <div className="container">
@@ -161,6 +165,9 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+
+      {/* Transition to green CTA */}
+      <div className="h-32 md:h-40 section-fade-white-to-green" />
 
       {/* CTA */}
       <section className="py-20 bg-primary text-primary-foreground">

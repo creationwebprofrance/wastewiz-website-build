@@ -50,6 +50,12 @@
     --gradient-cta: linear-gradient(135deg, hsl(99 52% 49%) 0%, hsl(123 37% 30%) 100%);
     --gradient-dark: linear-gradient(180deg, hsl(152 100% 16%) 0%, hsl(0 0% 5%) 100%);
 
+    /* Section transition gradients */
+    --gradient-white-to-green: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 100%) 10%, hsl(123 37% 30% / 0.05) 30%, hsl(123 37% 30% / 0.15) 50%, hsl(123 37% 30% / 0.4) 70%, hsl(123 37% 30%) 100%);
+    --gradient-green-to-white: linear-gradient(180deg, hsl(123 37% 30%) 0%, hsl(123 37% 30% / 0.4) 30%, hsl(123 37% 30% / 0.15) 50%, hsl(123 37% 30% / 0.05) 70%, hsl(0 0% 100%) 90%, hsl(0 0% 100%) 100%);
+    --gradient-muted-to-white: linear-gradient(180deg, hsl(120 10% 96%) 0%, hsl(120 10% 96%) 20%, hsl(0 0% 100%) 100%);
+    --gradient-white-to-muted: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(120 10% 96%) 80%, hsl(120 10% 96%) 100%);
+
     /* Shadows */
     --shadow-soft: 0 4px 20px -4px hsl(123 37% 30% / 0.15);
     --shadow-medium: 0 8px 30px -6px hsl(123 37% 30% / 0.25);
@@ -131,6 +137,23 @@
 
   .bg-gradient-dark {
     background-image: var(--gradient-dark);
+  }
+
+  /* Section transition utilities */
+  .section-fade-white-to-green {
+    background-image: var(--gradient-white-to-green);
+  }
+
+  .section-fade-green-to-white {
+    background-image: var(--gradient-green-to-white);
+  }
+
+  .section-fade-muted-to-white {
+    background-image: var(--gradient-muted-to-white);
+  }
+
+  .section-fade-white-to-muted {
+    background-image: var(--gradient-white-to-muted);
   }
 
   .shadow-soft {

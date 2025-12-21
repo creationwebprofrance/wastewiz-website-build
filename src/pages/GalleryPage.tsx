@@ -74,10 +74,10 @@ function BeforeAfterSlider({ before, after, beforeAlt, afterAlt }: BeforeAfterSl
       
       {/* Slider Handle */}
       <div 
-        className="absolute top-0 bottom-0 w-1 bg-white shadow-lg"
+        className="absolute top-0 bottom-0 w-1 bg-background shadow-lg"
         style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background shadow-lg flex items-center justify-center">
           <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
           </svg>
@@ -85,10 +85,10 @@ function BeforeAfterSlider({ before, after, beforeAlt, afterAlt }: BeforeAfterSl
       </div>
       
       {/* Labels */}
-      <div className="absolute top-4 left-4 px-3 py-1 bg-black/70 text-white text-sm font-semibold rounded">
+      <div className="absolute top-4 left-4 px-3 py-1 bg-foreground/70 text-background text-sm font-semibold rounded">
         BEFORE
       </div>
-      <div className="absolute top-4 right-4 px-3 py-1 bg-secondary text-white text-sm font-semibold rounded">
+      <div className="absolute top-4 right-4 px-3 py-1 bg-secondary text-secondary-foreground text-sm font-semibold rounded">
         AFTER
       </div>
     </div>
@@ -105,7 +105,7 @@ export default function GalleryPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-muted relative">
         <div className="container">
           <div className="max-w-3xl">
             <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Gallery</span>
@@ -118,10 +118,12 @@ export default function GalleryPage() {
             </p>
           </div>
         </div>
+        {/* Smooth fade to white */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-background" />
       </section>
 
       {/* Filter */}
-      <section className="py-8 border-b border-border">
+      <section className="py-8 border-b border-border bg-background">
         <div className="container">
           <div className="flex flex-wrap gap-3">
             {categories.map((category) => (
@@ -142,7 +144,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery */}
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-8">
             {filteredItems.map((item) => (
@@ -169,13 +171,16 @@ export default function GalleryPage() {
         </div>
       </section>
 
+      {/* Transition to green CTA */}
+      <div className="h-32 md:h-40 section-fade-white-to-green" />
+
       {/* CTA */}
-      <section className="py-20 bg-gradient-hero text-white">
+      <section className="py-20 bg-primary text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-3xl font-heading font-bold mb-4">
             Want Results Like These?
           </h2>
-          <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">
             Get your free quote today and let us transform your space.
           </p>
           <Button variant="white" size="lg" asChild>
