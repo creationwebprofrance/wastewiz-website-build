@@ -21,7 +21,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-muted relative">
         <div className="container">
           <div className="max-w-3xl">
             <span className="text-secondary font-semibold uppercase tracking-wider text-sm">About Us</span>
@@ -35,10 +35,12 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
+        {/* Smooth fade to white */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-background" />
       </section>
 
       {/* Story */}
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -77,6 +79,9 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Transition to green stats */}
+      <div className="h-32 md:h-40 section-fade-white-to-green" />
+
       {/* Stats */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container">
@@ -93,8 +98,11 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Transition from green to white */}
+      <div className="h-32 md:h-40 section-fade-green-to-white" />
+
       {/* Values */}
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <h2 className="text-3xl md:text-4xl font-heading font-bold">Our Values</h2>
@@ -119,6 +127,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Transition to muted CTA */}
+      <div className="h-24 bg-gradient-to-b from-background to-muted" />
 
       {/* CTA */}
       <section className="py-20 bg-muted">

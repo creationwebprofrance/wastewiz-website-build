@@ -49,8 +49,8 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="container relative z-10 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white space-y-8 animate-fade-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+            <div className="text-primary-foreground space-y-8 animate-fade-up">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-background/20">
                 <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
                 <span className="text-sm font-medium">Manchester's Trusted Waste Removal</span>
               </div>
@@ -59,7 +59,7 @@ export default function HomePage() {
                 Fast & Reliable Waste Removal Services
               </h1>
               
-              <p className="text-xl text-white/80 max-w-lg">
+              <p className="text-xl text-primary-foreground/80 max-w-lg">
                 Professional clearance solutions for homes and businesses across Greater Manchester. 
                 Same-day service available.
               </p>
@@ -71,7 +71,7 @@ export default function HomePage() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary" asChild>
+                <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
                   <a href="tel:+447123456789">
                     Call: 07123 456 789
                   </a>
@@ -101,9 +101,9 @@ export default function HomePage() {
                   alt="WasteWiz waste removal truck in Manchester"
                   className="w-full h-[500px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent" />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-6 shadow-strong animate-float">
+              <div className="absolute -bottom-6 -left-6 bg-background rounded-xl p-6 shadow-strong animate-float">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
                     <Star className="h-6 w-6 text-secondary" />
@@ -117,10 +117,13 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        
+        {/* Smooth fade to muted section */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-primary/20 to-muted" />
       </section>
 
       {/* Features */}
-      <section className="py-16 bg-muted">
+      <section className="py-16 bg-muted relative">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -140,10 +143,13 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+        
+        {/* Smooth fade to white section */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-background" />
       </section>
 
       {/* Services */}
-      <section className="py-20">
+      <section className="py-20 bg-background relative">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Our Services</span>
@@ -183,8 +189,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Transition to green section */}
+      <div className="h-32 md:h-40 section-fade-white-to-green" />
+
       {/* Before/After Preview */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-20 bg-primary text-primary-foreground relative">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -238,8 +247,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Transition from green to white */}
+      <div className="h-32 md:h-40 section-fade-green-to-white" />
+
       {/* Testimonials */}
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Testimonials</span>
@@ -270,13 +282,16 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Transition to CTA */}
+      <div className="h-32 md:h-40 section-fade-white-to-green" />
+
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-hero">
-        <div className="container text-center text-white">
+      <section className="py-20 bg-primary">
+        <div className="container text-center text-primary-foreground">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
             Ready to Clear Your Space?
           </h2>
-          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Get a free, no-obligation quote today. Same-day service available across Greater Manchester.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -286,7 +301,7 @@ export default function HomePage() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary" asChild>
+            <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
               <a href="tel:+447123456789">
                 Call Now: 07123 456 789
               </a>

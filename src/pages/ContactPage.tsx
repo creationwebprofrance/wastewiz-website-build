@@ -48,7 +48,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-muted relative">
         <div className="container">
           <div className="max-w-3xl">
             <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Contact Us</span>
@@ -61,10 +61,11 @@ export default function ContactPage() {
             </p>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-background" />
       </section>
 
       {/* Contact Section */}
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Form */}
