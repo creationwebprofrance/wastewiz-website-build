@@ -1,7 +1,7 @@
 interface SectionDividerProps {
   from?: "white" | "green" | "muted" | "dark";
   to?: "white" | "green" | "muted" | "dark";
-  height?: "sm" | "md" | "lg";
+  height?: "sm" | "md" | "lg" | "xl";
   className?: string;
 }
 
@@ -13,22 +13,23 @@ const colorMap = {
 };
 
 const heightMap = {
-  sm: "h-16 md:h-24",
-  md: "h-24 md:h-32",
-  lg: "h-32 md:h-48",
+  sm: "h-32 md:h-48",
+  md: "h-48 md:h-64",
+  lg: "h-64 md:h-96",
+  xl: "h-80 md:h-[28rem]",
 };
 
 export default function SectionDivider({ 
   from = "white", 
   to = "green",
-  height = "md",
+  height = "lg",
   className = "" 
 }: SectionDividerProps) {
   return (
     <div 
-      className={`${heightMap[height]} w-full ${className}`}
+      className={`${heightMap[height]} w-full -my-px ${className}`}
       style={{
-        background: `linear-gradient(to bottom, ${colorMap[from]}, ${colorMap[to]})`,
+        background: `linear-gradient(180deg, ${colorMap[from]} 0%, ${colorMap[to]} 100%)`,
       }}
     />
   );
