@@ -20,7 +20,6 @@ export default function ContactPage() {
     name: "",
     email: "",
     phone: "",
-    service: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -33,15 +32,15 @@ export default function ContactPage() {
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     toast({
-      title: "Quote Request Received!",
-      description: "We'll get back to you within 2 hours during business hours.",
+      title: "Message Sent!",
+      description: "We'll get back to you as soon as possible.",
     });
     
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", message: "" });
     setIsSubmitting(false);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
@@ -53,11 +52,11 @@ export default function ContactPage() {
           <div className="max-w-3xl">
             <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Contact Us</span>
             <h1 className="text-4xl md:text-5xl font-heading font-bold mt-3">
-              Get Your Free Quote
+              Get In Touch
             </h1>
             <p className="text-xl text-muted-foreground mt-6">
-              Ready to clear your space? Contact us for a free, no-obligation quote. 
-              We typically respond within 2 hours during business hours.
+              Have a question or need our services? We'd love to hear from you. 
+              Reach out and we'll respond as soon as possible.
             </p>
           </div>
         </div>
@@ -70,7 +69,7 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Form */}
             <div>
-              <h2 className="text-2xl font-heading font-bold mb-6">Request a Quote</h2>
+              <h2 className="text-2xl font-heading font-bold mb-6">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -85,14 +84,13 @@ export default function ContactPage() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number *</Label>
+                    <Label htmlFor="phone">Phone Number</Label>
                     <Input 
                       id="phone"
                       name="phone"
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      required
                       placeholder="07XXX XXX XXX"
                     />
                   </div>
@@ -112,28 +110,7 @@ export default function ContactPage() {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="service">Service Required</Label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="flex h-11 w-full rounded-lg border border-input bg-background px-4 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="rubbish-removal">Rubbish Removal</option>
-                    <option value="house-clearance">House Clearance</option>
-                    <option value="garden-clearance">Garden Clearance</option>
-                    <option value="office-clearance">Office Clearance</option>
-                    <option value="regular-collection">Regular Collection</option>
-                    <option value="bulky-items">Bulky Items Removal</option>
-                    <option value="deep-cleaning">Deep Cleaning</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="message">Tell us about your waste *</Label>
+                  <Label htmlFor="message">Your Message *</Label>
                   <Textarea 
                     id="message"
                     name="message"
@@ -141,12 +118,12 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    placeholder="Please describe what needs clearing, approximate quantities, and your preferred dates..."
+                    placeholder="How can we help you?"
                   />
                 </div>
                 
                 <Button type="submit" variant="hero" size="lg" disabled={isSubmitting} className="w-full sm:w-auto">
-                  {isSubmitting ? "Sending..." : "Request Free Quote"}
+                  {isSubmitting ? "Sending..." : "Send Message"}
                   <Send className="ml-2 h-5 w-5" />
                 </Button>
               </form>
@@ -154,10 +131,9 @@ export default function ContactPage() {
 
             {/* Contact Info */}
             <div>
-              <h2 className="text-2xl font-heading font-bold mb-6">Get In Touch</h2>
+              <h2 className="text-2xl font-heading font-bold mb-6">Contact Information</h2>
               <p className="text-muted-foreground mb-8">
-                Prefer to speak to someone directly? Give us a call or send a WhatsApp message 
-                for an instant response.
+                Prefer to speak to someone directly? Give us a call or send a WhatsApp message.
               </p>
               
               <div className="space-y-4">
@@ -183,14 +159,6 @@ export default function ContactPage() {
                     </div>
                   </div>
                 ))}
-              </div>
-              
-              <div className="mt-8 p-6 bg-primary/5 border border-primary/20 rounded-xl">
-                <h3 className="font-heading font-bold text-lg mb-2">Quick Response Guarantee</h3>
-                <p className="text-muted-foreground text-sm">
-                  We aim to respond to all enquiries within 2 hours during business hours. 
-                  For urgent jobs, call us directly for same-day service.
-                </p>
               </div>
             </div>
           </div>
