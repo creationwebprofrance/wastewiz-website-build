@@ -54,7 +54,7 @@ export default function Header() {
             </a>
           </Button>
           <Button variant="hero" size="sm" asChild>
-            <Link to="/contact">Get Free Quote</Link>
+            <Link to="/contact">Contact Us</Link>
           </Button>
         </div>
 
@@ -99,7 +99,7 @@ export default function Header() {
               </Button>
               <Button variant="hero" asChild>
                 <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                  Get Free Quote
+                  Contact Us
                 </Link>
               </Button>
             </div>
