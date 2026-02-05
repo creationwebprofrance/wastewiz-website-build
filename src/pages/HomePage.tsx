@@ -66,14 +66,14 @@ export default function HomePage() {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="white" size="lg" asChild>
-                  <Link to="/contact">
-                    Get Free Quote
+                   <Link to="/quote">
+                     Get a Quote
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                  <a href="tel:+447123456789">
-                    Call: 07123 456 789
+                   <a href="tel:+447340123486">
+                     Call: 07340 123486
                   </a>
                 </Button>
               </div>
@@ -296,14 +296,14 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="white" size="lg" asChild>
-              <Link to="/contact">
-                Get Free Quote
+               <Link to="/quote">
+                 Get a Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-              <a href="tel:+447123456789">
-                Call Now: 07123 456 789
+               <a href="tel:+447340123486">
+                 Call Now: 07340 123486
               </a>
             </Button>
           </div>
