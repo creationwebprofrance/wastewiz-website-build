@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, Send, Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -161,6 +161,34 @@ export default function ContactPage() {
                     </div>
                   </div>
                 ))}
+              </div>
+
+              {/* Social Media */}
+              <div className="mt-8 p-6 bg-muted rounded-xl">
+                <h3 className="font-heading font-bold mb-4">Follow Us</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Stay connected and see our latest work on social media.
+                </p>
+                <div className="flex gap-4">
+                  <a 
+                    href="https://www.facebook.com/share/1CiuEaJxyH/?mibextid=wwXIfr" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-[#1877F2] text-white rounded-lg hover:bg-[#1877F2]/90 transition-colors"
+                  >
+                    <Facebook className="h-5 w-5" />
+                    <span className="font-medium">Facebook</span>
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/waste_whiz?igsh=MWhzZTd3d2xsNGx4Nw==" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white rounded-lg hover:opacity-90 transition-opacity"
+                  >
+                    <Instagram className="h-5 w-5" />
+                    <span className="font-medium">Instagram</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
