@@ -7,11 +7,13 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "07123 456 789", href: "tel:+447123456789" },
-  { icon: MessageCircle, label: "WhatsApp", value: "07123 456 789", href: "https://wa.me/447123456789" },
-  { icon: Mail, label: "Email", value: "info@wastewiz.co.uk", href: "mailto:info@wastewiz.co.uk" },
+   { icon: Phone, label: "Phone", value: "07340 123486", href: "tel:+447340123486" },
+   { icon: Phone, label: "Phone", value: "07585 071979", href: "tel:+447585071979" },
+   { icon: Phone, label: "Landline", value: "01618 204999", href: "tel:+4401618204999" },
+   { icon: MessageCircle, label: "WhatsApp", value: "07340 123486", href: "https://wa.me/447340123486" },
+   { icon: Mail, label: "Email", value: "wastewhiz@rubbishclearanceltd.com", href: "mailto:wastewhiz@rubbishclearanceltd.com" },
   { icon: MapPin, label: "Location", value: "Manchester, Greater Manchester, UK", href: null },
-  { icon: Clock, label: "Hours", value: "Mon - Sat: 7am - 7pm", href: null },
+   { icon: Clock, label: "Hours", value: "Mon - Fri: 9am - 6pm, Sat: 10am - 4pm", href: null },
 ];
 
 export default function ContactPage() {

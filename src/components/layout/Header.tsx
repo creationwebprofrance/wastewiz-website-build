@@ -10,6 +10,7 @@ const navigation = [
   { name: "Services", href: "/services" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
+   { name: "Get a Quote", href: "/quote" },
 ];
 
 export default function Header() {
@@ -48,13 +49,13 @@ export default function Header() {
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-3">
           <Button variant="outline" size="sm" asChild>
-            <a href="tel:+447123456789" className="flex items-center gap-2">
+             <a href="tel:+447340123486" className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
               Call Now
             </a>
           </Button>
           <Button variant="hero" size="sm" asChild>
-            <Link to="/contact">Contact Us</Link>
+             <Link to="/quote">Get a Quote</Link>
           </Button>
         </div>
 
@@ -92,14 +93,14 @@ export default function Header() {
             ))}
             <div className="flex flex-col gap-3 pt-4">
               <Button variant="outline" asChild>
-                <a href="tel:+447123456789" className="flex items-center justify-center gap-2">
+                 <a href="tel:+447340123486" className="flex items-center justify-center gap-2">
                   <Phone className="h-4 w-4" />
                   Call Now
                 </a>
               </Button>
               <Button variant="hero" asChild>
-                <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                  Contact Us
+                 <Link to="/quote" onClick={() => setMobileMenuOpen(false)}>
+                   Get a Quote
                 </Link>
               </Button>
             </div>

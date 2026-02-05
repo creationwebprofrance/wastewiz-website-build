@@ -213,13 +213,13 @@ export default function ServiceDetailPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="white" size="lg" asChild>
-              <Link to="/contact">
-                Get Free Quote
+               <Link to="/quote">
+                 Get a Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary" asChild>
-              <a href="tel:+447123456789">Call: 07123 456 789</a>
+               <a href="tel:+447340123486">Call: 07340 123486</a>
             </Button>
           </div>
         </div>

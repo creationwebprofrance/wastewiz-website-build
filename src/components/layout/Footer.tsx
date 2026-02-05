@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter } from "lucide-react";
+ import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const services = [
@@ -15,6 +15,7 @@ const quickLinks = [
   { name: "About Us", href: "/about" },
   { name: "Our Services", href: "/services" },
   { name: "Before & After", href: "/gallery" },
+   { name: "Get a Quote", href: "/quote" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -36,25 +37,22 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a 
-                href="#" 
+                 href="https://www.facebook.com/share/1CiuEaJxyH/?mibextid=wwXIfr" 
+                 target="_blank"
+                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a 
-                href="#" 
+                 href="https://www.instagram.com/waste_whiz?igsh=MWhzZTd3d2xsNGx4Nw==" 
+                 target="_blank"
+                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -100,15 +98,21 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-secondary mt-0.5" />
                 <div>
-                  <a href="tel:+447123456789" className="text-white hover:text-secondary transition-colors">
-                    07123 456 789
+                   <a href="tel:+447340123486" className="block text-white hover:text-secondary transition-colors">
+                     07340 123486
+                   </a>
+                   <a href="tel:+447585071979" className="block text-white hover:text-secondary transition-colors">
+                     07585 071979
+                   </a>
+                   <a href="tel:+4401618204999" className="block text-white/70 hover:text-secondary transition-colors text-sm">
+                     01618 204999
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-secondary mt-0.5" />
-                <a href="mailto:info@wastewiz.co.uk" className="text-white/70 hover:text-secondary transition-colors text-sm">
-                  info@wastewiz.co.uk
+                 <a href="mailto:wastewhiz@rubbishclearanceltd.com" className="text-white/70 hover:text-secondary transition-colors text-sm break-all">
+                   wastewhiz@rubbishclearanceltd.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -119,9 +123,10 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="h-5 w-5 text-secondary mt-0.5" />
-                <span className="text-white/70 text-sm">
-                  Mon - Sat: 7am - 7pm
-                </span>
+                 <div className="text-white/70 text-sm">
+                   <p>Mon - Fri: 9am - 6pm</p>
+                   <p>Sat: 10am - 4pm</p>
+                 </div>
               </li>
             </ul>
           </div>
