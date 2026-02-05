@@ -7,13 +7,15 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-   { icon: Phone, label: "Phone", value: "07340 123486", href: "tel:+447340123486" },
-   { icon: Phone, label: "Phone", value: "07585 071979", href: "tel:+447585071979" },
-   { icon: Phone, label: "Landline", value: "01618 204999", href: "tel:+4401618204999" },
-   { icon: MessageCircle, label: "WhatsApp", value: "07340 123486", href: "https://wa.me/447340123486" },
-   { icon: Mail, label: "Email", value: "wastewhiz@rubbishclearanceltd.com", href: "mailto:wastewhiz@rubbishclearanceltd.com" },
+  { icon: Phone, label: "Phone", value: "07340 123486", href: "tel:+447340123486" },
+  { icon: Phone, label: "Phone", value: "07585 071979", href: "tel:+447585071979" },
+  { icon: Phone, label: "Landline", value: "01618 204999", href: "tel:+4401618204999" },
+  { icon: MessageCircle, label: "WhatsApp", value: "07340 123486", href: "https://wa.me/447340123486" },
+  { icon: Mail, label: "Email", value: "wastewhiz@rubbishclearanceltd.com", href: "mailto:wastewhiz@rubbishclearanceltd.com" },
+  { icon: Facebook, label: "Facebook", value: "WasteWiz", href: "https://www.facebook.com/share/1CiuEaJxyH/?mibextid=wwXIfr" },
+  { icon: Instagram, label: "Instagram", value: "@waste_whiz", href: "https://www.instagram.com/waste_whiz?igsh=MWhzZTd3d2xsNGx4Nw==" },
   { icon: MapPin, label: "Location", value: "Manchester, Greater Manchester, UK", href: null },
-   { icon: Clock, label: "Hours", value: "Mon - Fri: 9am - 6pm, Sat: 10am - 4pm", href: null },
+  { icon: Clock, label: "Hours", value: "Mon - Fri: 9am - 6pm, Sat: 10am - 4pm", href: null },
 ];
 
 export default function ContactPage() {
@@ -163,33 +165,6 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              {/* Social Media */}
-              <div className="mt-8 p-6 bg-muted rounded-xl">
-                <h3 className="font-heading font-bold mb-4">Follow Us</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Stay connected and see our latest work on social media.
-                </p>
-                <div className="flex gap-4">
-                  <a 
-                    href="https://www.facebook.com/share/1CiuEaJxyH/?mibextid=wwXIfr" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-[#1877F2] text-white rounded-lg hover:bg-[#1877F2]/90 transition-colors"
-                  >
-                    <Facebook className="h-5 w-5" />
-                    <span className="font-medium">Facebook</span>
-                  </a>
-                  <a 
-                    href="https://www.instagram.com/waste_whiz?igsh=MWhzZTd3d2xsNGx4Nw==" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white rounded-lg hover:opacity-90 transition-opacity"
-                  >
-                    <Instagram className="h-5 w-5" />
-                    <span className="font-medium">Instagram</span>
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
