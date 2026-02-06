@@ -1,11 +1,12 @@
- import { useState } from "react";
- import { Link } from "react-router-dom";
- import { Phone, Mail, Upload, X, Send, ArrowLeft } from "lucide-react";
- import { Button } from "@/components/ui/button";
- import { Input } from "@/components/ui/input";
- import { Textarea } from "@/components/ui/textarea";
- import { Label } from "@/components/ui/label";
- import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Phone, Mail, Upload, X, Send, ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
  
  export default function QuotePage() {
    const { toast } = useToast();
@@ -20,22 +21,42 @@
    const [photos, setPhotos] = useState<File[]>([]);
    const [isSubmitting, setIsSubmitting] = useState(false);
  
-   const handleSubmit = async (e: React.FormEvent) => {
-     e.preventDefault();
-     setIsSubmitting(true);
-     
-     // Simulate form submission
-     await new Promise(resolve => setTimeout(resolve, 1000));
-     
-     toast({
-       title: "Quote Request Sent!",
-       description: "We'll contact you shortly with your personalised quote.",
-     });
-     
-     setFormData({ firstName: "", lastName: "", phone: "", email: "", postcode: "", message: "" });
-     setPhotos([]);
-     setIsSubmitting(false);
-   };
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          type: "quote",
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone,
+          postcode: formData.postcode,
+          message: formData.message || "No additional details provided.",
+        },
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Quote Request Sent!",
+        description: "We'll contact you shortly with your personalised quote.",
+      });
+      
+      setFormData({ firstName: "", lastName: "", phone: "", email: "", postcode: "", message: "" });
+      setPhotos([]);
+    } catch (error) {
+      console.error("Error sending quote request:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send your request. Please try again or call us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
  
    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
      setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
