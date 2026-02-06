@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 
-const contactInfo = [
+const contactMethods = [
   { icon: Phone, label: "Phone", value: "07340 123486", href: "tel:+447340123486" },
   { icon: Phone, label: "Phone", value: "07585 071979", href: "tel:+447585071979" },
   { icon: Phone, label: "Landline", value: "01618 204999", href: "tel:+4401618204999" },
@@ -14,8 +14,6 @@ const contactInfo = [
   { icon: Mail, label: "Email", value: "wastewhiz@rubbishclearanceltd.com", href: "mailto:wastewhiz@rubbishclearanceltd.com" },
   { icon: Facebook, label: "Facebook", value: "WasteWiz", href: "https://www.facebook.com/share/1CiuEaJxyH/?mibextid=wwXIfr" },
   { icon: Instagram, label: "Instagram", value: "@waste_whiz", href: "https://www.instagram.com/waste_whiz?igsh=MWhzZTd3d2xsNGx4Nw==" },
-  { icon: MapPin, label: "Location", value: "Manchester, Greater Manchester, UK", href: null },
-  { icon: Clock, label: "Hours", value: "Mon - Fri: 9am - 6pm, Sat: 10am - 4pm", href: null },
 ];
 
 export default function ContactPage() {
@@ -65,6 +63,34 @@ export default function ContactPage() {
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-background" />
+      </section>
+
+      {/* Location & Hours Banner */}
+      <section className="py-12 bg-muted relative">
+        <div className="container">
+          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl">
+            <div className="flex items-start gap-4 p-5 bg-background rounded-xl shadow-sm">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <MapPin className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground">Location</p>
+                <p className="font-semibold">Manchester, Greater Manchester, UK</p>
+                <p className="text-sm text-muted-foreground mt-1">Serving all of Greater Manchester</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 p-5 bg-background rounded-xl shadow-sm">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Clock className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground">Opening Hours</p>
+                <p className="font-semibold">Mon – Fri: 9am – 6pm</p>
+                <p className="font-semibold">Sat: 10am – 4pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Contact Section */}
@@ -141,7 +167,7 @@ export default function ContactPage() {
               </p>
               
               <div className="space-y-4">
-                {contactInfo.map((item) => (
+                {contactMethods.map((item) => (
                   <div key={item.label} className="flex items-start gap-4 p-4 bg-muted rounded-xl">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <item.icon className="h-6 w-6 text-primary" />
