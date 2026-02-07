@@ -5,6 +5,12 @@ import beforeImage1 from "@/assets/before-1.jpg";
 import afterImage1 from "@/assets/after-1.jpg";
 import beforeImage2 from "@/assets/before-2.jpg";
 import afterImage2 from "@/assets/after-2.jpg";
+import beforeImage3 from "@/assets/before-3.jpg";
+import afterImage3 from "@/assets/after-3.jpg";
+import beforeImage4 from "@/assets/before-4.jpg";
+import afterImage4 from "@/assets/after-4.jpg";
+import beforeImage5 from "@/assets/before-5.jpg";
+import afterImage5 from "@/assets/after-5.jpg";
 
 const galleryItems = [
   {
@@ -24,6 +30,33 @@ const galleryItems = [
     after: afterImage2,
     beforeAlt: "Garden before waste removal service Manchester",
     afterAlt: "Garden after waste removal service Manchester",
+  },
+  {
+    id: 3,
+    title: "Front Garden Clearance - Manchester",
+    category: "House Clearance",
+    before: beforeImage3,
+    after: afterImage3,
+    beforeAlt: "Front garden full of rubbish before clearance Manchester",
+    afterAlt: "Clean front garden after waste clearance Manchester",
+  },
+  {
+    id: 4,
+    title: "Back Garden Clearance - Stockport",
+    category: "Garden Clearance",
+    before: beforeImage4,
+    after: afterImage4,
+    beforeAlt: "Back garden with wood and debris before clearance Manchester",
+    afterAlt: "Tidy back garden after waste removal Manchester",
+  },
+  {
+    id: 5,
+    title: "Appliance & Junk Removal - Salford",
+    category: "House Clearance",
+    before: beforeImage5,
+    after: afterImage5,
+    beforeAlt: "Old appliances and junk before removal Manchester",
+    afterAlt: "Clean yard after appliance and junk removal Manchester",
   },
 ];
 
