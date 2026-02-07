@@ -11,6 +11,8 @@ import beforeImage4 from "@/assets/before-4.jpg";
 import afterImage4 from "@/assets/after-4.jpg";
 import beforeImage5 from "@/assets/before-5.jpg";
 import afterImage5 from "@/assets/after-5.jpg";
+import beforeImage6 from "@/assets/before-6.jpg";
+import afterImage6 from "@/assets/after-6.jpg";
 
 const galleryItems = [
   {
@@ -57,6 +59,15 @@ const galleryItems = [
     after: afterImage5,
     beforeAlt: "Old appliances and junk before removal Manchester",
     afterAlt: "Clean yard after appliance and junk removal Manchester",
+  },
+  {
+    id: 6,
+    title: "Garage Clearance - Manchester",
+    category: "House Clearance",
+    before: beforeImage6,
+    after: afterImage6,
+    beforeAlt: "Garage full of mattresses tyres and furniture before clearance Manchester",
+    afterAlt: "Empty clean garage after waste clearance Manchester",
   },
 ];
 
