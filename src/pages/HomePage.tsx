@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Star, Truck, Leaf, Clock } from "lucide-react";
+import WaveDivider from "@/components/layout/WaveDivider";
 import { Button } from "@/components/ui/button";
 import truckImage from "@/assets/truck-1.jpg";
 import beforeImage from "@/assets/before-1.jpg";
@@ -190,7 +191,7 @@ export default function HomePage() {
       </section>
 
       {/* Transition to green section */}
-      <div className="h-32 md:h-40 section-fade-white-to-green" />
+      <WaveDivider from="white" to="green" />
 
       {/* Before/After Preview */}
       <section className="py-20 bg-primary text-primary-foreground relative">
@@ -281,7 +282,7 @@ export default function HomePage() {
       </section>
 
       {/* Transition to CTA */}
-      <div className="h-32 md:h-40 section-fade-white-to-green" />
+      <WaveDivider from="white" to="green" />
 
       {/* CTA Section */}
       <section className="py-20 bg-primary">

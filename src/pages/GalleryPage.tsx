@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import WaveDivider from "@/components/layout/WaveDivider";
 import beforeImage1 from "@/assets/before-1.jpg";
 import afterImage1 from "@/assets/after-1.jpg";
 import beforeImage2 from "@/assets/before-2.jpg";
@@ -216,7 +217,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Transition to green CTA */}
-      <div className="h-32 md:h-40 section-fade-white-to-green" />
+      <WaveDivider from="white" to="green" />
 
       {/* CTA */}
       <section className="py-20 bg-primary text-primary-foreground">

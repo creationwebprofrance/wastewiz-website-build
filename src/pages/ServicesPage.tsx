@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Trash2, Home, TreePine, Building, Calendar, Sofa, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import WaveDivider from "@/components/layout/WaveDivider";
 
 const services = [
   {
@@ -96,7 +97,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Transition to green CTA */}
-      <div className="h-32 md:h-40 section-fade-white-to-green" />
+      <WaveDivider from="white" to="green" />
 
       {/* CTA */}
       <section className="py-20 bg-primary text-primary-foreground">
