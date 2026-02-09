@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { CheckCircle, Users, Leaf, Award, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import WaveDivider from "@/components/layout/WaveDivider";
 import truckImage from "@/assets/truck-2.jpg";
 
 const values = [
@@ -80,7 +81,7 @@ export default function AboutPage() {
       </section>
 
       {/* Transition to green stats */}
-      <div className="h-32 md:h-40 section-fade-white-to-green" />
+      <WaveDivider from="white" to="green" />
 
       {/* Stats */}
       <section className="py-16 bg-primary text-primary-foreground">
@@ -99,7 +100,7 @@ export default function AboutPage() {
       </section>
 
       {/* Transition from green to white */}
-      <div className="h-32 md:h-40 section-fade-green-to-white" />
+      <WaveDivider from="green" to="white" flip />
 
       {/* Values */}
       <section className="py-20 bg-background">
