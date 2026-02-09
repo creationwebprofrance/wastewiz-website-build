@@ -247,8 +247,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Transition from green to white */}
-      <div className="h-32 md:h-40 section-fade-green-to-white" />
 
       {/* Testimonials */}
       <section className="py-20 bg-background">
