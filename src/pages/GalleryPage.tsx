@@ -217,7 +217,7 @@ export default function GalleryPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-dark text-white">
+      <section className="py-20 bg-gradient-dark-reverse text-white">
         <div className="container text-center">
           <h2 className="text-3xl font-heading font-bold mb-4">
             Want Results Like These?
