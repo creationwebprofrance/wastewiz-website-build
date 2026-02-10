@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { CheckCircle, Users, Leaf, Award, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import WaveDivider from "@/components/layout/WaveDivider";
+
 import truckImage from "@/assets/truck-2.jpg";
 
 const values = [
@@ -80,11 +80,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Transition to green stats */}
-      <WaveDivider from="white" to="green" />
-
       {/* Stats */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      <section className="py-16 bg-gradient-dark text-white">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat) => (
@@ -92,15 +89,12 @@ export default function AboutPage() {
                 <p className="text-4xl md:text-5xl font-heading font-bold text-secondary">
                   {stat.value}
                 </p>
-                <p className="text-primary-foreground/80 mt-2">{stat.label}</p>
+                <p className="text-white/80 mt-2">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Transition from green to white */}
-      <WaveDivider from="green" to="white" flip />
 
       {/* Values */}
       <section className="py-20 bg-background">

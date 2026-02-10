@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Star, Truck, Leaf, Clock } from "lucide-react";
-import WaveDivider from "@/components/layout/WaveDivider";
+
 import { Button } from "@/components/ui/button";
 import truckImage from "@/assets/truck-1.jpg";
 import beforeImage from "@/assets/before-1.jpg";
@@ -190,11 +190,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Transition to green section */}
-      <WaveDivider from="white" to="green" />
-
       {/* Before/After Preview */}
-      <section className="py-20 bg-primary text-primary-foreground relative">
+      <section className="py-20 bg-gradient-dark text-white relative">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -202,7 +199,7 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-4xl font-heading font-bold">
                 Transforming Spaces Across Manchester
               </h2>
-              <p className="text-primary-foreground/80 text-lg">
+              <p className="text-white/80 text-lg">
                 Our team takes pride in delivering exceptional results. See the dramatic 
                 transformations we achieve for our customers every day.
               </p>
@@ -281,16 +278,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Transition to CTA */}
-      <WaveDivider from="white" to="green" />
-
       {/* CTA Section */}
-      <section className="py-20 bg-primary">
-        <div className="container text-center text-primary-foreground">
+      <section className="py-20 bg-gradient-dark">
+        <div className="container text-center text-white">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
             Ready to Clear Your Space?
           </h2>
-          <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             Get a free, no-obligation quote today. Same-day service available across Greater Manchester.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -300,7 +294,7 @@ export default function HomePage() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
+             <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-foreground" asChild>
                <a href="tel:+447340123486">
                  Call Now: 07340 123486
               </a>
