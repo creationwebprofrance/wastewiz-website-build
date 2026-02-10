@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import WaveDivider from "@/components/layout/WaveDivider";
+
 import beforeImage1 from "@/assets/before-1.jpg";
 import afterImage1 from "@/assets/after-1.jpg";
 import beforeImage2 from "@/assets/before-2.jpg";
@@ -216,16 +216,13 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Transition to green CTA */}
-      <WaveDivider from="white" to="green" />
-
       {/* CTA */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-20 bg-gradient-dark text-white">
         <div className="container text-center">
           <h2 className="text-3xl font-heading font-bold mb-4">
             Want Results Like These?
           </h2>
-          <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
             Get your free quote today and let us transform your space.
           </p>
           <Button variant="white" size="lg" asChild>

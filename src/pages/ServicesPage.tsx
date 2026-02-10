@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Trash2, Home, TreePine, Building, Calendar, Sofa, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import WaveDivider from "@/components/layout/WaveDivider";
+
 
 const services = [
   {
@@ -96,16 +96,13 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Transition to green CTA */}
-      <WaveDivider from="white" to="green" />
-
       {/* CTA */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-20 bg-gradient-dark text-white">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
             Need a Custom Solution?
           </h2>
-          <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
             Every job is different. Contact us to discuss your specific requirements 
             and get a tailored quote.
           </p>
@@ -113,7 +110,7 @@ export default function ServicesPage() {
             <Button variant="white" size="lg" asChild>
               <Link to="/contact">Get Free Quote</Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
+            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-foreground" asChild>
               <a href="tel:+447123456789">Call: 07123 456 789</a>
             </Button>
           </div>
