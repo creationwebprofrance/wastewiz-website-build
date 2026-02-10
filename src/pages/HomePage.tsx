@@ -279,7 +279,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-dark">
+      <section className="py-20 bg-gradient-dark-reverse">
         <div className="container text-center text-white">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
             Ready to Clear Your Space?
