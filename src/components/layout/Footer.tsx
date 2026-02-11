@@ -37,7 +37,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a 
-                 href="https://www.facebook.com/share/1CiuEaJxyH/?mibextid=wwXIfr" 
+                 href="https://www.facebook.com/people/Rubbish-and-House-Clearance/100090455190354/" 
                  target="_blank"
                  rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"
@@ -46,7 +46,7 @@ export default function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
               <a 
-                 href="https://www.instagram.com/waste_whiz?igsh=MWhzZTd3d2xsNGx4Nw==" 
+                 href="https://www.instagram.com/waste_whiz" 
                  target="_blank"
                  rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"

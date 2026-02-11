@@ -13,8 +13,8 @@ const contactMethods = [
   { icon: Phone, label: "Landline", value: "01618 204999", href: "tel:+4401618204999" },
   { icon: MessageCircle, label: "WhatsApp", value: "07340 123486", href: "https://wa.me/447340123486" },
   { icon: Mail, label: "Email", value: "wastewhiz@rubbishclearanceltd.com", href: "mailto:wastewhiz@rubbishclearanceltd.com" },
-  { icon: Facebook, label: "Facebook", value: "WasteWiz", href: "https://www.facebook.com/share/1CiuEaJxyH/?mibextid=wwXIfr" },
-  { icon: Instagram, label: "Instagram", value: "@waste_whiz", href: "https://www.instagram.com/waste_whiz?igsh=MWhzZTd3d2xsNGx4Nw==" },
+  { icon: Facebook, label: "Facebook", value: "WasteWiz", href: "https://www.facebook.com/people/Rubbish-and-House-Clearance/100090455190354/" },
+  { icon: Instagram, label: "Instagram", value: "@waste_whiz", href: "https://www.instagram.com/waste_whiz" },
 ];
 
 export default function ContactPage() {
