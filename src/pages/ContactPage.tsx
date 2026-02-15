@@ -4,8 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 
 const contactMethods = [
   { icon: Phone, label: "Phone", value: "07340 123486", href: "tel:+447340123486" },
@@ -18,48 +16,22 @@ const contactMethods = [
 ];
 
 export default function ContactPage() {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    try {
-      const { data, error } = await supabase.functions.invoke("send-contact-email", {
-        body: {
-          type: "contact",
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-        },
-      });
-
-      if (error) throw error;
-
-      toast({
-        title: "Message Sent!",
-        description: "We'll get back to you as soon as possible.",
-      });
-      
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    } catch (error) {
-      console.error("Error sending message:", error);
-      toast({
-        title: "Error",
-        description: "Failed to send your message. Please try again or call us directly.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    const subject = `Contact from ${formData.name}`;
+    const body = `Name: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+    
+    const mailtoLink = `mailto:wastewhiz@rubbishclearanceltd.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -172,8 +144,8 @@ export default function ContactPage() {
                   />
                 </div>
                 
-                <Button type="submit" variant="hero" size="lg" disabled={isSubmitting} className="w-full sm:w-auto">
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                <Button type="submit" variant="hero" size="lg" className="w-full sm:w-auto">
+                  Send Message
                   <Send className="ml-2 h-5 w-5" />
                 </Button>
               </form>

@@ -5,12 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
  
- export default function QuotePage() {
-   const { toast } = useToast();
-   const [formData, setFormData] = useState({
+export default function QuotePage() {
+    const [formData, setFormData] = useState({
      firstName: "",
      lastName: "",
      phone: "",
@@ -18,45 +15,17 @@ import { supabase } from "@/integrations/supabase/client";
      postcode: "",
      message: "",
    });
-   const [photos, setPhotos] = useState<File[]>([]);
-   const [isSubmitting, setIsSubmitting] = useState(false);
- 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      const { data, error } = await supabase.functions.invoke("send-contact-email", {
-        body: {
-          type: "quote",
-          name: `${formData.firstName} ${formData.lastName}`,
-          email: formData.email,
-          phone: formData.phone,
-          postcode: formData.postcode,
-          message: formData.message || "No additional details provided.",
-        },
-      });
+    const [photos, setPhotos] = useState<File[]>([]);
 
-      if (error) throw error;
-
-      toast({
-        title: "Quote Request Sent!",
-        description: "We'll contact you shortly with your personalised quote.",
-      });
-      
-      setFormData({ firstName: "", lastName: "", phone: "", email: "", postcode: "", message: "" });
-      setPhotos([]);
-    } catch (error) {
-      console.error("Error sending quote request:", error);
-      toast({
-        title: "Error",
-        description: "Failed to send your request. Please try again or call us directly.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+   const handleSubmit = (e: React.FormEvent) => {
+     e.preventDefault();
+     
+     const subject = `Quote Request from ${formData.firstName} ${formData.lastName}`;
+     const body = `Name: ${formData.firstName} ${formData.lastName}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nPostcode: ${formData.postcode}\n\nRequirements:\n${formData.message || "No additional details provided."}`;
+     
+     const mailtoLink = `mailto:wastewhiz@rubbishclearanceltd.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+     window.location.href = mailtoLink;
+   };
  
    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
      setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -231,10 +200,10 @@ import { supabase } from "@/integrations/supabase/client";
                    )}
                  </div>
                  
-                 <Button type="submit" variant="hero" size="lg" disabled={isSubmitting} className="w-full sm:w-auto">
-                   {isSubmitting ? "Sending..." : "Request Quote"}
-                   <Send className="ml-2 h-5 w-5" />
-                 </Button>
+                <Button type="submit" variant="hero" size="lg" className="w-full sm:w-auto">
+                    Request Quote
+                    <Send className="ml-2 h-5 w-5" />
+                  </Button>
                </form>
              </div>
  
