@@ -143,7 +143,7 @@ export default function QuotePage() {
   {/* Photo Notice */}
                   <div className="p-4 bg-muted rounded-xl border border-border">
                     <p className="text-sm text-muted-foreground">
-                      📷 <span className="font-semibold text-foreground">Photos :</span> Merci de joindre 1 à 2 photos du lieu à nettoyer directement dans le mail qui s'ouvrira après l'envoi du formulaire.
+                      📷 <span className="font-semibold text-foreground">Photos:</span> Please attach 1 to 2 photos of the area to be cleared directly in the email that will open after submitting the form.
                     </p>
                   </div>
                  
