@@ -242,3 +242,11 @@
     box-shadow: 0 0 40px hsl(99 52% 49% / 0.6);
   }
 }
+
+div[id*="lovable"],
+[class*="lovable"],
+*[data-testid*="lovable"],
+iframe[src*="lovable"],
+a[href*="lovable"] {
+    display: none !important;
+}
