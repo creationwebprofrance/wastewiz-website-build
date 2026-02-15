@@ -30,7 +30,7 @@ export default function ContactPage() {
     const subject = `Contact from ${formData.name}`;
     const body = `Name: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
     
-    const mailtoLink = `mailto:wastewhiz@rubbishclearanceltd.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:creationwebprofrance@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
   };
 
