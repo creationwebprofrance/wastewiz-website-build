@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import PageTransition from "@/components/layout/PageTransition";
 import HomePage from "@/pages/HomePage";
@@ -11,14 +12,18 @@ import AboutPage from "@/pages/AboutPage";
 import ServicesPage from "@/pages/ServicesPage";
 import ServiceDetailPage from "@/pages/ServiceDetailPage";
 import GalleryPage from "@/pages/GalleryPage";
- import ContactPage from "@/pages/ContactPage";
- import QuotePage from "@/pages/QuotePage";
+import ContactPage from "@/pages/ContactPage";
+import QuotePage from "@/pages/QuotePage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
 
 function AnimatedRoutes() {
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <AnimatePresence mode="wait">
@@ -29,7 +34,7 @@ function AnimatedRoutes() {
         <Route path="/services/:slug" element={<PageTransition><ServiceDetailPage /></PageTransition>} />
         <Route path="/gallery" element={<PageTransition><GalleryPage /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
-         <Route path="/quote" element={<PageTransition><QuotePage /></PageTransition>} />
+        <Route path="/quote" element={<PageTransition><QuotePage /></PageTransition>} />
         <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
       </Routes>
     </AnimatePresence>
