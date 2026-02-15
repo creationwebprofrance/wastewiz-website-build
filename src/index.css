@@ -243,30 +243,19 @@
   }
 }
 
-div[id*="lovable"],
-div[id*="lovable-badge-close"],
-div[id*="lovable-badge-divider"],
-div[id*="lovable-badge-cta"],
-div[id*="lovable-badge"],
-[class*="lovable"],
-[class*="lovable-badge-close"],
-[class*="lovable-badge-divider"],
-[class*="lovable-badge-cta"],
-[class*="lovable-badge"],
-*[data-testid*="lovable"],
-*[data-testid*="lovable-badge-close"],
-*[data-testid*="lovable-badge-divider"],
-*[data-testid*="lovable-badge-cta"],
-*[data-testid*="lovable-badge"],
-iframe[src*="lovable"],
-iframe[src*="lovable-badge-close"],
-iframe[src*="lovable-badge-divider"],
-iframe[src*="lovable-badge-cta"],
-iframe[src*="lovable-badge"],
-a[href*="lovable"],
-a[href*="lovable-badge-close"],
-a[href*="lovable-badge-divider"],
-a[href*="lovable-badge-cta"],
-a[href*="lovable-badge"] {
+#lovable-badge,
+#lovable-badge-close,
+#lovable-badge-divider,
+#lovable-badge-cta,
+[id="lovable"],
+[class="lovable"],
+[data-testid="lovable"],
+iframe[src="lovable"],
+a[href="lovable"],
+aside[id="lovable-badge"],
+div[id="root"] > aside[id="lovable-badge"] {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
