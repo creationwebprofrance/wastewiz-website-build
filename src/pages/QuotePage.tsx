@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Phone, Mail, Upload, X, Send, ArrowLeft } from "lucide-react";
+import { Phone, Mail, Send, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -14,35 +14,22 @@ export default function QuotePage() {
      email: "",
      postcode: "",
      message: "",
-   });
-    const [photos, setPhotos] = useState<File[]>([]);
+    });
 
-   const handleSubmit = (e: React.FormEvent) => {
-     e.preventDefault();
-     
-     const subject = `Quote Request from ${formData.firstName} ${formData.lastName}`;
-     const body = `Name: ${formData.firstName} ${formData.lastName}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nPostcode: ${formData.postcode}\n\nRequirements:\n${formData.message || "No additional details provided."}`;
-     
-     const mailtoLink = `mailto:creationwebprofrance@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-     window.location.href = mailtoLink;
-   };
- 
-   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
-   };
- 
-   const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-     const files = e.target.files;
-     if (files) {
-       const newPhotos = Array.from(files).slice(0, 2 - photos.length);
-       setPhotos(prev => [...prev, ...newPhotos].slice(0, 2));
-     }
-   };
- 
-   const removePhoto = (index: number) => {
-     setPhotos(prev => prev.filter((_, i) => i !== index));
-   };
- 
+    const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+      
+      const subject = `Quote Request from ${formData.firstName} ${formData.lastName}`;
+      const body = `Name: ${formData.firstName} ${formData.lastName}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nPostcode: ${formData.postcode}\n\nRequirements:\n${formData.message || "No additional details provided."}`;
+      
+      const mailtoLink = `mailto:creationwebprofrance@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoLink;
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    };
+
    return (
      <>
        {/* Hero */}
@@ -153,52 +140,12 @@ export default function QuotePage() {
                    />
                  </div>
  
-                 {/* Photo Upload */}
-                 <div className="space-y-2">
-                   <Label>Photos (optional, max 2)</Label>
-                   <p className="text-sm text-muted-foreground mb-2">
-                     Upload photos of the area or items to help us provide an accurate quote.
-                   </p>
-                   
-                   {photos.length < 2 && (
-                     <div className="border-2 border-dashed border-border rounded-xl p-6 text-center hover:border-primary transition-colors cursor-pointer">
-                       <input
-                         type="file"
-                         accept="image/*"
-                         onChange={handlePhotoUpload}
-                         className="hidden"
-                         id="photo-upload"
-                         multiple
-                       />
-                       <label htmlFor="photo-upload" className="cursor-pointer">
-                         <Upload className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
-                         <p className="text-muted-foreground">Click to upload photos</p>
-                         <p className="text-sm text-muted-foreground">JPG, PNG up to 10MB</p>
-                       </label>
-                     </div>
-                   )}
-                   
-                   {photos.length > 0 && (
-                     <div className="flex gap-4 mt-4">
-                       {photos.map((photo, index) => (
-                         <div key={index} className="relative">
-                           <img 
-                             src={URL.createObjectURL(photo)} 
-                             alt={`Upload ${index + 1}`}
-                             className="w-24 h-24 object-cover rounded-lg"
-                           />
-                           <button
-                             type="button"
-                             onClick={() => removePhoto(index)}
-                             className="absolute -top-2 -right-2 w-6 h-6 bg-destructive text-destructive-foreground rounded-full flex items-center justify-center"
-                           >
-                             <X className="h-4 w-4" />
-                           </button>
-                         </div>
-                       ))}
-                     </div>
-                   )}
-                 </div>
+  {/* Photo Notice */}
+                  <div className="p-4 bg-muted rounded-xl border border-border">
+                    <p className="text-sm text-muted-foreground">
+                      📷 <span className="font-semibold text-foreground">Photos :</span> Merci de joindre 1 à 2 photos du lieu à nettoyer directement dans le mail qui s'ouvrira après l'envoi du formulaire.
+                    </p>
+                  </div>
                  
                 <Button type="submit" variant="hero" size="lg" className="w-full sm:w-auto">
                     Request Quote
