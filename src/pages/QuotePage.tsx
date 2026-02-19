@@ -22,7 +22,7 @@ export default function QuotePage() {
       const subject = `Quote Request from ${formData.firstName} ${formData.lastName}`;
       const body = `Name: ${formData.firstName} ${formData.lastName}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nPostcode: ${formData.postcode}\n\nRequirements:\n${formData.message || "No additional details provided."}`;
       
-      const mailtoLink = `mailto:creationwebprofrance@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const mailtoLink = `mailto:wastewhiz@rubbishclearanceltd.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       window.location.href = mailtoLink;
     };
 
