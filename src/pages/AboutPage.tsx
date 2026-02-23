@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle, Users, Leaf, Award, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import truckImage from "@/assets/truck-2.jpg";
+import truckImage from "@/assets/truck-3.jpg";
 
 const values = [
   { icon: Users, title: "Customer First", description: "Your satisfaction is our top priority. We go above and beyond to deliver exceptional service." },
@@ -58,14 +58,14 @@ export default function AboutPage() {
                 reliable, affordable waste removal services that don't harm the environment.
               </p>
               <p className="text-muted-foreground">
-                What began as a small local operation has grown into one of Manchester's most 
+                We began as a small local operation and have grown into one of Manchester's most 
                 trusted clearance companies. We've helped hundreds of homeowners, landlords, 
                 and businesses clear their spaces efficiently and responsibly.
               </p>
               <p className="text-muted-foreground">
-                Today, we continue to uphold our founding values of customer service, 
-                environmental responsibility, and community commitment. Every job, big or small, 
-                receives the same level of dedication and professionalism.
+                Our values remain the same: great customer service, care for the environment, 
+                and a strong commitment to our community. Every job gets our full attention, 
+                no matter the size.
               </p>
               <ul className="space-y-3">
                 {["Fully licensed waste carriers", "Environmentally responsible disposal", "Transparent, upfront pricing", "Friendly, professional team"].map((item) => (

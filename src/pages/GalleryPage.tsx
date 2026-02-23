@@ -14,6 +14,8 @@ import beforeImage5 from "@/assets/before-5.jpg";
 import afterImage5 from "@/assets/after-5.jpg";
 import beforeImage6 from "@/assets/before-6.jpg";
 import afterImage6 from "@/assets/after-6.jpg";
+import beforeImage7 from "@/assets/before-7.jpg";
+import afterImage7 from "@/assets/after-7.jpg";
 
 const galleryItems = [
   {
@@ -69,6 +71,15 @@ const galleryItems = [
     after: afterImage6,
     beforeAlt: "Garage full of mattresses tyres and furniture before clearance Manchester",
     afterAlt: "Empty clean garage after waste clearance Manchester",
+  },
+  {
+    id: 7,
+    title: "Office Clearance - Manchester City Centre",
+    category: "Office Clearance",
+    before: beforeImage7,
+    after: afterImage7,
+    beforeAlt: "Cluttered office full of old furniture and equipment before clearance Manchester",
+    afterAlt: "Clean empty office space after professional clearance Manchester",
   },
 ];
 
