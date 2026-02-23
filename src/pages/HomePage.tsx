@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle, Star, Truck, Leaf, Clock } from "lucide-react"
 
 import { Button } from "@/components/ui/button";
 import truckImage from "@/assets/truck-1.jpg";
+import teamWorkImage from "@/assets/team-work.png";
 import beforeImage from "@/assets/before-1.jpg";
 import afterImage from "@/assets/after-1.jpg";
 
@@ -96,13 +97,21 @@ export default function HomePage() {
             </div>
             
             <div className="relative hidden lg:block">
-              <div className="relative rounded-2xl overflow-hidden shadow-strong">
-                <img 
-                  src={truckImage}
-                  alt="WasteWiz waste removal truck in Manchester"
-                  className="w-full h-[500px] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent" />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="rounded-2xl overflow-hidden shadow-strong">
+                  <img 
+                    src={truckImage}
+                    alt="WasteWiz waste removal truck in Manchester"
+                    className="w-full h-[500px] object-cover"
+                  />
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-strong">
+                  <img 
+                    src={teamWorkImage}
+                    alt="WasteWiz team loading waste into truck"
+                    className="w-full h-[500px] object-cover"
+                  />
+                </div>
               </div>
               <div className="absolute -bottom-6 -left-6 bg-background rounded-xl p-6 shadow-strong animate-float">
                 <div className="flex items-center gap-4">
