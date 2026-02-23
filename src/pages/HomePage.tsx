@@ -97,21 +97,12 @@ export default function HomePage() {
             </div>
             
             <div className="relative hidden lg:block">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-2xl overflow-hidden shadow-strong">
-                  <img 
-                    src={truckImage}
-                    alt="WasteWiz waste removal truck in Manchester"
-                    className="w-full h-[500px] object-cover"
-                  />
-                </div>
-                <div className="rounded-2xl overflow-hidden shadow-strong">
-                  <img 
-                    src={teamWorkImage}
-                    alt="WasteWiz team loading waste into truck"
-                    className="w-full h-[500px] object-cover"
-                  />
-                </div>
+              <div className="rounded-2xl overflow-hidden shadow-strong">
+                <img 
+                  src={teamWorkImage}
+                  alt="WasteWiz team loading waste into truck"
+                  className="w-full h-[500px] object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-background rounded-xl p-6 shadow-strong animate-float">
                 <div className="flex items-center gap-4">
