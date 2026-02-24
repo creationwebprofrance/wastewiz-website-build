@@ -3,6 +3,7 @@ import { CheckCircle, Users, Leaf, Award, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import truckImage from "@/assets/truck-3.jpg";
+import teamWorkImage from "@/assets/team-work.png";
 
 const values = [
   { icon: Users, title: "Customer First", description: "Your satisfaction is our top priority. We go above and beyond to deliver exceptional service." },
@@ -46,8 +47,8 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src={truckImage}
-                alt="WasteWiz waste removal team in action"
+                src={teamWorkImage}
+                alt="WasteWiz team at work"
                 className="rounded-2xl shadow-strong w-full h-[400px] object-cover"
               />
             </div>
