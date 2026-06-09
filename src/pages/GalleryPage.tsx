@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+
+const FN_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/gallery-admin`;
+const ANON = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string;
 
 import beforeImage1 from "@/assets/before-1.jpg";
 import afterImage1 from "@/assets/after-1.jpg";
