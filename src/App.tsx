@@ -14,6 +14,7 @@ import ServiceDetailPage from "@/pages/ServiceDetailPage";
 import GalleryPage from "@/pages/GalleryPage";
 import ContactPage from "@/pages/ContactPage";
 import QuotePage from "@/pages/QuotePage";
+import AdminGalleryPage from "@/pages/AdminGalleryPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ function AnimatedRoutes() {
         <Route path="/gallery" element={<PageTransition><GalleryPage /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
         <Route path="/quote" element={<PageTransition><QuotePage /></PageTransition>} />
+        <Route path="/aE12ad1231a1d5a" element={<PageTransition><AdminGalleryPage /></PageTransition>} />
         <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
       </Routes>
     </AnimatePresence>
