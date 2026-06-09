@@ -156,10 +156,36 @@ function BeforeAfterSlider({ before, after, beforeAlt, afterAlt }: BeforeAfterSl
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [remoteItems, setRemoteItems] = useState<typeof galleryItems>([]);
 
-  const filteredItems = activeCategory === "All" 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeCategory);
+  useEffect(() => {
+    fetch(`${FN_URL}?action=list`, {
+      headers: { apikey: ANON, Authorization: `Bearer ${ANON}` },
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        const mapped = (data.items ?? []).map((i: any) => ({
+          id: i.id,
+          title: i.title,
+          category: i.category,
+          before: i.before_url,
+          after: i.after_url,
+          beforeAlt: i.before_alt || i.title,
+          afterAlt: i.after_alt || i.title,
+        }));
+        setRemoteItems(mapped);
+      })
+      .catch(() => {});
+  }, []);
+
+  const allItems = [...remoteItems, ...galleryItems];
+  const allCategories = Array.from(
+    new Set(["All", ...categories.slice(1), ...allItems.map((i) => i.category)]),
+  );
+
+  const filteredItems = activeCategory === "All"
+    ? allItems
+    : allItems.filter((item) => item.category === activeCategory);
 
   return (
     <>
@@ -185,7 +211,7 @@ export default function GalleryPage() {
       <section className="py-8 border-b border-border bg-background">
         <div className="container">
           <div className="flex flex-wrap gap-3">
-            {categories.map((category) => (
+            {allCategories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
