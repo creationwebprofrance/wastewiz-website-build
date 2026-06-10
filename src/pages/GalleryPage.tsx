@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 const FN_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/gallery-admin`;
 const ANON = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string;
