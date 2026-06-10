@@ -190,6 +190,12 @@ export default function GalleryPage() {
 
   return (
     <>
+      <SEO
+        title="Gallery | Waste Removal Manchester – Before & After | WasteWiz"
+        description="See real before & after photos of waste removal and clearance jobs across Manchester & Greater Manchester. Real results from the WasteWiz team."
+        canonical="/gallery"
+        keywords="waste removal Manchester gallery, before after clearance Greater Manchester, house clearance photos Manchester"
+      />
       {/* Hero */}
       <section className="py-20 bg-muted relative">
         <div className="container">
