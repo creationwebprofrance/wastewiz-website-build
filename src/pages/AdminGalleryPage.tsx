@@ -176,7 +176,7 @@ export default function AdminGalleryPage() {
         <div className="grid md:grid-cols-2 gap-4">
           <div>
             <Label>Titre</Label>
-            <Input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Office Clearance - Manchester" />
+            <Input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Office Clearance - Greater Manchester" />
           </div>
           <div>
             <Label>Catégorie</Label>

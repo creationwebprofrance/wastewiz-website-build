@@ -32,7 +32,7 @@ export default function Footer() {
               className="h-14 w-auto brightness-0 invert"
             />
             <p className="text-white/70 text-sm leading-relaxed">
-              Manchester's trusted waste removal service. Fast, reliable, and eco-friendly 
+              Greater Manchester's trusted waste removal service. Fast, reliable, and eco-friendly 
               clearance solutions for homes and businesses.
             </p>
             <div className="flex gap-4">
@@ -118,7 +118,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-secondary mt-0.5" />
                 <span className="text-white/70 text-sm">
-                  Manchester, Greater Manchester, UK
+                  Greater Manchester, Greater Greater Manchester, UK
                 </span>
               </li>
               <li className="flex items-start gap-3">

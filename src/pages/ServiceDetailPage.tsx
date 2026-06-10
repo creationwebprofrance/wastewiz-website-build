@@ -10,7 +10,7 @@ const serviceDetails: Record<string, {
 }> = {
   "rubbish-removal": {
     title: "Rubbish Removal",
-    description: "Professional rubbish removal services for homes and businesses across Manchester. We handle all types of general waste, from household items to commercial refuse.",
+    description: "Professional rubbish removal services for homes and businesses across Greater Manchester. We handle all types of general waste, from household items to commercial refuse.",
     features: [
       "Same-day collection available",
       "All types of general waste accepted",
