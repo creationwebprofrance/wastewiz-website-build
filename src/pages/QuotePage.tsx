@@ -33,6 +33,12 @@ export default function QuotePage() {
 
    return (
      <>
+       <SEO
+         title="Free Quote | Waste Removal Manchester & Greater Manchester | WasteWiz"
+         description="Get a free, no-obligation quote for waste removal anywhere in Manchester & Greater Manchester. Fast response, transparent pricing, same-day service available."
+         canonical="/quote"
+         keywords="waste removal quote Manchester, rubbish clearance quote Greater Manchester, free waste removal quote"
+       />
        {/* Hero */}
        <section className="py-20 bg-muted relative">
          <div className="container">
