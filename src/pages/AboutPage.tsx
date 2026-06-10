@@ -23,6 +23,12 @@ const stats = [
 export default function AboutPage() {
   return (
     <>
+      <SEO
+        title="About WasteWiz | Waste Removal Manchester & Greater Manchester"
+        description="Family-run waste removal team serving Manchester & Greater Manchester. Licensed carriers recycling up to 90% of waste. Learn about WasteWiz."
+        canonical="/about"
+        keywords="about WasteWiz, waste removal Manchester company, Greater Manchester rubbish clearance team"
+      />
       {/* Hero */}
       <section className="py-20 bg-muted relative">
         <div className="container">
