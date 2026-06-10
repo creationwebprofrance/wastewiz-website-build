@@ -76,7 +76,7 @@ export default function HomePage() {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
-                Fast & Reliable Waste Removal Services
+                Waste Removal in Manchester &amp; Greater Manchester
               </h1>
               
               <p className="text-xl text-primary-foreground/80 max-w-lg">
