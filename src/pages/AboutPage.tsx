@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { CheckCircle, Users, Leaf, Award, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 import truckImage from "@/assets/truck-3.jpg";
 import teamWorkImage from "@/assets/team-work.png";
