@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { ArrowRight, CheckCircle, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 const serviceDetails: Record<string, {
   title: string;
