@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://wastewiz.co.uk/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://wastewiz.co.uk/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wastewiz.co.uk/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wastewiz.co.uk/services/rubbish-removal</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wastewiz.co.uk/services/house-clearance</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wastewiz.co.uk/services/garden-clearance</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wastewiz.co.uk/services/office-clearance</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wastewiz.co.uk/services/regular-collection</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wastewiz.co.uk/services/bulky-items</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wastewiz.co.uk/services/deep-cleaning</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wastewiz.co.uk/gallery</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wastewiz.co.uk/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wastewiz.co.uk/quote</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+</urlset>

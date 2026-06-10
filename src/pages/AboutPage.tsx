@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { CheckCircle, Users, Leaf, Award, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 import truckImage from "@/assets/truck-3.jpg";
 import teamWorkImage from "@/assets/team-work.png";
@@ -22,6 +23,12 @@ const stats = [
 export default function AboutPage() {
   return (
     <>
+      <SEO
+        title="About WasteWiz | Waste Removal Manchester & Greater Manchester"
+        description="Family-run waste removal team serving Manchester & Greater Manchester. Licensed carriers recycling up to 90% of waste. Learn about WasteWiz."
+        canonical="/about"
+        keywords="about WasteWiz, waste removal Manchester company, Greater Manchester rubbish clearance team"
+      />
       {/* Hero */}
       <section className="py-20 bg-muted relative">
         <div className="container">
@@ -31,7 +38,7 @@ export default function AboutPage() {
               Greater Manchester's Trusted Waste Removal Experts
             </h1>
             <p className="text-xl text-muted-foreground mt-6">
-              WasteWiz is a family-run waste removal company serving Greater Greater Manchester. 
+              WasteWiz is a family-run waste removal company serving Greater Manchester. 
               We're committed to providing fast, reliable, and eco-friendly clearance services 
               for homes and businesses.
             </p>

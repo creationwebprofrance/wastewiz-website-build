@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Trash2, Home, TreePine, Building, Calendar, Sofa, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 
 const services = [
@@ -51,6 +52,12 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
+      <SEO
+        title="Waste Removal Services Manchester | Rubbish Clearance Greater Manchester"
+        description="Full range of waste removal services across Manchester & Greater Manchester: rubbish, house, garden, office clearance, bulky items and regular collection."
+        canonical="/services"
+        keywords="waste removal services Manchester, rubbish clearance Greater Manchester, house clearance Manchester, garden clearance Manchester, office clearance Manchester"
+      />
       {/* Hero */}
       <section className="py-20 bg-muted relative">
         <div className="container">

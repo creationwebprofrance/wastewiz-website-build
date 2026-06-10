@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { ArrowRight, CheckCircle, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 const serviceDetails: Record<string, {
   title: string;
@@ -146,6 +147,21 @@ export default function ServiceDetailPage() {
 
   return (
     <>
+      <SEO
+        title={`${service.title} Manchester | WasteWiz Greater Manchester`}
+        description={`${service.title} in Manchester & Greater Manchester. ${service.description.slice(0, 110)}`}
+        canonical={`/services/${slug}`}
+        keywords={`${service.title.toLowerCase()} Manchester, ${service.title.toLowerCase()} Greater Manchester, waste removal Manchester`}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": `${service.title} Manchester`,
+          "provider": { "@type": "LocalBusiness", "name": "WasteWiz", "url": "https://wastewiz.co.uk" },
+          "areaServed": [{ "@type": "City", "name": "Manchester" }, { "@type": "AdministrativeArea", "name": "Greater Manchester" }],
+          "description": service.description,
+          "url": `https://wastewiz.co.uk/services/${slug}`
+        }}
+      />
       {/* Hero */}
       <section className="py-20 bg-muted">
         <div className="container">

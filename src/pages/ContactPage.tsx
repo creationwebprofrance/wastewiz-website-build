@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import SEO from "@/components/SEO";
 
 const contactMethods = [
   { icon: Phone, label: "Phone", value: "07340 123486", href: "tel:+447340123486" },
@@ -40,6 +41,12 @@ export default function ContactPage() {
 
   return (
     <>
+      <SEO
+        title="Contact WasteWiz | Waste Removal Manchester & Greater Manchester"
+        description="Call, WhatsApp or email WasteWiz for fast waste removal across Manchester & Greater Manchester. Free quotes, same-day service available."
+        canonical="/contact"
+        keywords="contact waste removal Manchester, WasteWiz phone, rubbish clearance Greater Manchester contact"
+      />
       {/* Hero */}
       <section className="py-20 bg-muted relative">
         <div className="container">

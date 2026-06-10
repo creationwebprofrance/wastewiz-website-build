@@ -1,8 +1,10 @@
 User-agent: Googlebot
 Allow: /
+Disallow: /aE12ad1231a1d5a
 
 User-agent: Bingbot
 Allow: /
+Disallow: /aE12ad1231a1d5a
 
 User-agent: Twitterbot
 Allow: /
@@ -12,3 +14,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /aE12ad1231a1d5a
+
+Sitemap: https://wastewiz.co.uk/sitemap.xml

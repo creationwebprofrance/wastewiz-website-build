@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Star, Truck, Leaf, Clock } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 import truckImage from "@/assets/truck-1.jpg";
 import teamWorkImage from "@/assets/team-work.png";
 import beforeImage from "@/assets/before-1.jpg";
@@ -46,6 +47,23 @@ const testimonials = [
 export default function HomePage() {
   return (
     <>
+      <SEO
+        title="Waste Removal Manchester | WasteWiz – Greater Manchester Rubbish Clearance"
+        description="Same-day waste removal in Manchester & Greater Manchester. Rubbish, house, garden & office clearance by licensed waste carriers. Get a free quote from WasteWiz."
+        canonical="/"
+        keywords="waste removal Manchester, waste Manchester, waste Greater Manchester, rubbish removal Manchester, rubbish clearance Greater Manchester, house clearance Manchester, garden clearance Manchester"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "WasteWiz",
+          "url": "https://wastewiz.co.uk/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://wastewiz.co.uk/services?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center bg-gradient-hero overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
@@ -58,11 +76,11 @@ export default function HomePage() {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
-                Fast & Reliable Waste Removal Services
+                Waste Removal in Manchester &amp; Greater Manchester
               </h1>
               
               <p className="text-xl text-primary-foreground/80 max-w-lg">
-                Professional clearance solutions for homes and businesses across Greater Greater Manchester. 
+                Professional clearance solutions for homes and businesses across Greater Manchester. 
                 Same-day service available.
               </p>
               
@@ -285,7 +303,7 @@ export default function HomePage() {
             Ready to Clear Your Space?
           </h2>
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Get a free, no-obligation quote today. Same-day service available across Greater Greater Manchester.
+            Get a free, no-obligation quote today. Same-day service available across Greater Manchester.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="white" size="lg" asChild>
