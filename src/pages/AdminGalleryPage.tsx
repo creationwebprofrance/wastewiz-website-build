@@ -50,6 +50,7 @@ async function callFn(action: string, opts: { method?: string; password?: string
 }
 
 export default function AdminGalleryPage() {
+  useNoIndex();
   const [password, setPassword] = useState<string>(() => sessionStorage.getItem(STORAGE_KEY) ?? "");
   const [authed, setAuthed] = useState(false);
   const [checking, setChecking] = useState(true);
