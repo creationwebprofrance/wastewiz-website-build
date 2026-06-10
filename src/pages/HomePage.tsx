@@ -62,7 +62,7 @@ export default function HomePage() {
               </h1>
               
               <p className="text-xl text-primary-foreground/80 max-w-lg">
-                Professional clearance solutions for homes and businesses across Greater Greater Manchester. 
+                Professional clearance solutions for homes and businesses across Greater Manchester. 
                 Same-day service available.
               </p>
               
@@ -285,7 +285,7 @@ export default function HomePage() {
             Ready to Clear Your Space?
           </h2>
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Get a free, no-obligation quote today. Same-day service available across Greater Greater Manchester.
+            Get a free, no-obligation quote today. Same-day service available across Greater Manchester.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="white" size="lg" asChild>

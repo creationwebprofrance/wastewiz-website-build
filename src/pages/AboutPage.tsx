@@ -31,7 +31,7 @@ export default function AboutPage() {
               Greater Manchester's Trusted Waste Removal Experts
             </h1>
             <p className="text-xl text-muted-foreground mt-6">
-              WasteWiz is a family-run waste removal company serving Greater Greater Manchester. 
+              WasteWiz is a family-run waste removal company serving Greater Manchester. 
               We're committed to providing fast, reliable, and eco-friendly clearance services 
               for homes and businesses.
             </p>
