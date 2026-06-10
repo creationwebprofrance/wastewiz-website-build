@@ -5,6 +5,16 @@ import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
 import { Trash2, Lock, Upload } from "lucide-react";
 
+function useNoIndex() {
+  useEffect(() => {
+    const meta = document.createElement("meta");
+    meta.name = "robots";
+    meta.content = "noindex, nofollow";
+    document.head.appendChild(meta);
+    return () => { meta.remove(); };
+  }, []);
+}
+
 const FN_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/gallery-admin`;
 const ANON = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string;
 const STORAGE_KEY = "ww_gallery_admin_pwd";
