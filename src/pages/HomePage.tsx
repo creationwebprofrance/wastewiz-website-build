@@ -47,6 +47,23 @@ const testimonials = [
 export default function HomePage() {
   return (
     <>
+      <SEO
+        title="Waste Removal Manchester | WasteWiz – Greater Manchester Rubbish Clearance"
+        description="Same-day waste removal in Manchester & Greater Manchester. Rubbish, house, garden & office clearance by licensed waste carriers. Get a free quote from WasteWiz."
+        canonical="/"
+        keywords="waste removal Manchester, waste Manchester, waste Greater Manchester, rubbish removal Manchester, rubbish clearance Greater Manchester, house clearance Manchester, garden clearance Manchester"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "WasteWiz",
+          "url": "https://wastewiz.co.uk/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://wastewiz.co.uk/services?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center bg-gradient-hero overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
