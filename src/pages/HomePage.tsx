@@ -54,7 +54,7 @@ export default function HomePage() {
             <div className="text-primary-foreground space-y-8 animate-fade-up">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-background/20">
                 <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-                <span className="text-sm font-medium">Manchester's Trusted Waste Removal</span>
+                <span className="text-sm font-medium">Greater Manchester's Trusted Waste Removal</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
@@ -62,7 +62,7 @@ export default function HomePage() {
               </h1>
               
               <p className="text-xl text-primary-foreground/80 max-w-lg">
-                Professional clearance solutions for homes and businesses across Greater Manchester. 
+                Professional clearance solutions for homes and businesses across Greater Greater Manchester. 
                 Same-day service available.
               </p>
               
@@ -100,7 +100,7 @@ export default function HomePage() {
               <div className="rounded-2xl overflow-hidden shadow-strong">
                 <img 
                   src={truckImage}
-                  alt="WasteWiz waste removal truck in Manchester"
+                  alt="WasteWiz waste removal truck in Greater Manchester"
                   className="w-full h-[500px] object-cover"
                 />
               </div>
@@ -197,7 +197,7 @@ export default function HomePage() {
             <div className="space-y-6">
               <span className="text-secondary font-semibold uppercase tracking-wider text-sm">See The Results</span>
               <h2 className="text-3xl md:text-4xl font-heading font-bold">
-                Transforming Spaces Across Manchester
+                Transforming Spaces Across Greater Manchester
               </h2>
               <p className="text-white/80 text-lg">
                 Our team takes pride in delivering exceptional results. See the dramatic 
@@ -224,7 +224,7 @@ export default function HomePage() {
                 <div className="rounded-xl overflow-hidden">
                   <img 
                     src={beforeImage}
-                    alt="Property before waste removal in Manchester"
+                    alt="Property before waste removal in Greater Manchester"
                     className="w-full h-64 object-cover"
                   />
                 </div>
@@ -234,7 +234,7 @@ export default function HomePage() {
                 <div className="rounded-xl overflow-hidden">
                   <img 
                     src={afterImage}
-                    alt="Property after waste removal in Manchester"
+                    alt="Property after waste removal in Greater Manchester"
                     className="w-full h-64 object-cover"
                   />
                 </div>
@@ -270,7 +270,7 @@ export default function HomePage() {
                 <p className="text-muted-foreground mb-6">"{testimonial.text}"</p>
                 <div>
                   <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.location}, Manchester</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.location}, Greater Manchester</p>
                 </div>
               </div>
             ))}
@@ -285,7 +285,7 @@ export default function HomePage() {
             Ready to Clear Your Space?
           </h2>
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Get a free, no-obligation quote today. Same-day service available across Greater Manchester.
+            Get a free, no-obligation quote today. Same-day service available across Greater Greater Manchester.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="white" size="lg" asChild>

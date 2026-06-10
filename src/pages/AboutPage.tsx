@@ -28,10 +28,10 @@ export default function AboutPage() {
           <div className="max-w-3xl">
             <span className="text-secondary font-semibold uppercase tracking-wider text-sm">About Us</span>
             <h1 className="text-4xl md:text-5xl font-heading font-bold mt-3">
-              Manchester's Trusted Waste Removal Experts
+              Greater Manchester's Trusted Waste Removal Experts
             </h1>
             <p className="text-xl text-muted-foreground mt-6">
-              WasteWiz is a family-run waste removal company serving Greater Manchester. 
+              WasteWiz is a family-run waste removal company serving Greater Greater Manchester. 
               We're committed to providing fast, reliable, and eco-friendly clearance services 
               for homes and businesses.
             </p>
@@ -55,11 +55,11 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-3xl font-heading font-bold">Our Story</h2>
               <p className="text-muted-foreground">
-                Founded in Manchester, WasteWiz started with a simple mission: to provide 
+                Founded in Greater Manchester, WasteWiz started with a simple mission: to provide 
                 reliable, affordable waste removal services that don't harm the environment.
               </p>
               <p className="text-muted-foreground">
-                We began as a small local operation and have grown into one of Manchester's most 
+                We began as a small local operation and have grown into one of Greater Manchester's most 
                 trusted clearance companies. We've helped hundreds of homeowners, landlords, 
                 and businesses clear their spaces efficiently and responsibly.
               </p>

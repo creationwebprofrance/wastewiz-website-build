@@ -24,7 +24,7 @@ export default function Header() {
         <Link to="/" className="flex items-center gap-2">
           <img 
             src={logo} 
-            alt="WasteWiz - Waste Removal Services Manchester" 
+            alt="WasteWiz - Waste Removal Services Greater Manchester" 
             className="h-12 w-auto"
           />
         </Link>
