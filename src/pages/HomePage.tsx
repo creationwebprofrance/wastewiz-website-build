@@ -115,13 +115,12 @@ export default function HomePage() {
             </div>
             
             <div className="relative hidden lg:flex lg:items-center lg:justify-center">
-              <div className="rounded-2xl overflow-hidden shadow-strong bg-background w-full max-w-xl">
-                <img 
-                  src={truckImage.url}
-                  alt="WasteWiz waste removal truck in Greater Manchester"
-                  className="w-full h-[520px] object-contain"
-                />
-              </div>
+              <img 
+                src={truckImage.url}
+                alt="WasteWiz waste removal truck in Greater Manchester"
+                className="w-full h-auto max-h-[600px] object-contain"
+              />
+
               <div className="absolute -bottom-6 -left-6 bg-background rounded-xl p-6 shadow-strong animate-float">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
