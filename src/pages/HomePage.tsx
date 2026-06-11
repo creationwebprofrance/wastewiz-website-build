@@ -117,7 +117,7 @@ export default function HomePage() {
             <div className="relative hidden lg:block">
               <div className="rounded-2xl overflow-hidden shadow-strong">
                 <img 
-                  src={truckImage}
+                  src={truckImage.url}
                   alt="WasteWiz waste removal truck in Greater Manchester"
                   className="w-full h-[500px] object-cover"
                 />
