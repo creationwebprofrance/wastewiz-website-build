@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, Star, Truck, Leaf, Clock } from "lucide-react"
 
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
-import truckImage from "@/assets/truck-hero.jpg.asset.json";
+import truckImage from "@/assets/truck-hero-local.jpg";
 import teamWorkImage from "@/assets/team-work.png";
 import beforeImage from "@/assets/before-1.jpg";
 import afterImage from "@/assets/after-1.jpg";
@@ -67,9 +67,9 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center bg-gradient-hero overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-        <div className="container relative z-10 py-16 lg:py-20">
-          <div className="grid gap-10 lg:grid-cols-[minmax(330px,0.78fr)_minmax(700px,1.22fr)] xl:grid-cols-[minmax(360px,0.7fr)_minmax(820px,1.3fr)] lg:gap-10 items-center">
-            <div className="text-primary-foreground space-y-8 animate-fade-up">
+        <div className="relative z-10 w-full px-5 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 py-16 lg:py-20">
+          <div className="mx-auto grid w-full max-w-[1800px] gap-10 lg:grid-cols-[minmax(380px,520px)_minmax(0,1fr)] xl:grid-cols-[minmax(430px,560px)_minmax(0,1fr)] lg:gap-14 xl:gap-20 items-center">
+            <div className="relative z-10 text-primary-foreground space-y-8 animate-fade-up min-w-0">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-background/20">
                 <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
                 <span className="text-sm font-medium">Greater Manchester's Trusted Waste Removal</span>
@@ -116,9 +116,9 @@ export default function HomePage() {
             
             <div className="relative flex items-center justify-center lg:justify-end animate-fade-up min-w-0">
               <img 
-                src={truckImage.url}
+                src={truckImage}
                 alt="WasteWiz waste removal truck in Greater Manchester"
-                className="block w-full max-w-[720px] lg:max-w-none lg:w-full xl:w-[108%] h-auto max-h-[560px] lg:max-h-[740px] object-contain rounded-[2rem] shadow-strong"
+                className="block w-full max-w-[760px] lg:max-w-none h-auto max-h-[560px] lg:max-h-[740px] object-contain rounded-[2rem] shadow-strong"
               />
             </div>
           </div>
