@@ -68,7 +68,7 @@ export default function HomePage() {
       <section className="relative min-h-[90vh] flex items-center bg-gradient-hero overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="container relative z-10 py-16 lg:py-20">
-          <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] xl:grid-cols-[0.74fr_1.26fr] lg:gap-6 xl:gap-10 items-center">
+          <div className="grid gap-10 lg:grid-cols-[minmax(330px,0.78fr)_minmax(700px,1.22fr)] xl:grid-cols-[minmax(360px,0.7fr)_minmax(820px,1.3fr)] lg:gap-10 items-center">
             <div className="text-primary-foreground space-y-8 animate-fade-up">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-background/20">
                 <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
@@ -114,11 +114,11 @@ export default function HomePage() {
               </div>
             </div>
             
-            <div className="relative flex items-center justify-center lg:justify-end animate-fade-up">
+            <div className="relative flex items-center justify-center lg:justify-end animate-fade-up min-w-0">
               <img 
                 src={truckImage.url}
                 alt="WasteWiz waste removal truck in Greater Manchester"
-                className="block w-full max-w-[720px] lg:max-w-none lg:w-[112%] xl:w-[124%] h-auto max-h-[560px] lg:max-h-[760px] object-contain rounded-[2rem] shadow-strong"
+                className="block w-full max-w-[720px] lg:max-w-none lg:w-full xl:w-[108%] h-auto max-h-[560px] lg:max-h-[740px] object-contain rounded-[2rem] shadow-strong"
               />
             </div>
           </div>
