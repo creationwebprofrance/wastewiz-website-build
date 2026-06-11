@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, Star, Truck, Leaf, Clock } from "lucide-react"
 
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
-import truckImage from "@/assets/truck-1.jpg";
+import truckImage from "@/assets/truck-hero.jpg.asset.json";
 import teamWorkImage from "@/assets/team-work.png";
 import beforeImage from "@/assets/before-1.jpg";
 import afterImage from "@/assets/after-1.jpg";
