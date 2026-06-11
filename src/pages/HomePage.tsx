@@ -118,8 +118,9 @@ export default function HomePage() {
               <img 
                 src={truckImage.url}
                 alt="WasteWiz waste removal truck in Greater Manchester"
-                className="w-full h-auto max-h-[600px] object-contain"
+                className="w-full h-auto max-h-[600px] object-contain rounded-3xl"
               />
+
 
               <div className="absolute -bottom-6 -left-6 bg-background rounded-xl p-6 shadow-strong animate-float">
                 <div className="flex items-center gap-4">
