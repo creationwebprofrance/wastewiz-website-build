@@ -67,8 +67,8 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center bg-gradient-hero overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-        <div className="container relative z-10 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container relative z-10 py-16 lg:py-20">
+          <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] xl:grid-cols-[0.74fr_1.26fr] lg:gap-6 xl:gap-10 items-center">
             <div className="text-primary-foreground space-y-8 animate-fade-up">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-background/20">
                 <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
@@ -114,25 +114,12 @@ export default function HomePage() {
               </div>
             </div>
             
-            <div className="relative hidden lg:flex lg:items-center lg:justify-center">
+            <div className="relative flex items-center justify-center lg:justify-end animate-fade-up">
               <img 
                 src={truckImage.url}
                 alt="WasteWiz waste removal truck in Greater Manchester"
-                className="w-full h-auto max-h-[600px] object-contain rounded-3xl"
+                className="block w-full max-w-[720px] lg:max-w-none lg:w-[112%] xl:w-[124%] h-auto max-h-[560px] lg:max-h-[760px] object-contain rounded-[2rem] shadow-strong"
               />
-
-
-              <div className="absolute -bottom-6 -left-6 bg-background rounded-xl p-6 shadow-strong animate-float">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
-                    <Star className="h-6 w-6 text-secondary" />
-                  </div>
-                  <div>
-                    <p className="font-heading font-bold text-2xl text-primary">500+</p>
-                    <p className="text-sm text-muted-foreground">Happy Customers</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
