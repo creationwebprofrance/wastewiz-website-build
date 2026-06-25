@@ -100,9 +100,8 @@ const handler = async (req: Request): Promise<Response> => {
     });
   } catch (error: unknown) {
     console.error("Error sending email:", error);
-    const errorMessage = error instanceof Error ? error.message : "Unknown error";
     return new Response(
-      JSON.stringify({ error: errorMessage }),
+      JSON.stringify({ error: "Internal server error" }),
       { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
     );
   }
