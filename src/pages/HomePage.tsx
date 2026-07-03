@@ -118,6 +118,10 @@ export default function HomePage() {
               <img 
                 src={truckImage}
                 alt="WasteWiz waste removal truck in Greater Manchester"
+                width={1200}
+                height={900}
+                fetchPriority="high"
+                decoding="async"
                 className="block w-full max-w-[760px] lg:max-w-none h-auto max-h-[560px] lg:max-h-[740px] object-contain rounded-[2rem] shadow-strong"
               />
             </div>
