@@ -77,8 +77,11 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background" aria-labelledby="all-services-heading">
         <div className="container">
+          <h2 id="all-services-heading" className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
+            All Waste Removal Services
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <div 
@@ -93,8 +96,9 @@ export default function ServicesPage() {
                 <Link 
                   to={service.href}
                   className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-4 transition-all"
+                  aria-label={`Read more about ${service.name}`}
                 >
-                  Learn more
+                  <span>Read about {service.name.toLowerCase()}</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
