@@ -236,8 +236,11 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background" aria-labelledby="projects-heading">
         <div className="container">
+          <h2 id="projects-heading" className="text-3xl md:text-4xl font-heading font-bold mb-10">
+            Recent Waste Clearance Projects
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {filteredItems.map((item) => (
               <div key={item.id} className="space-y-4">
