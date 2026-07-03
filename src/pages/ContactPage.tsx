@@ -42,7 +42,7 @@ export default function ContactPage() {
   return (
     <>
       <SEO
-        title="Contact WasteWiz | Waste Removal Manchester & Greater Manchester"
+        title="Contact WasteWiz | Waste Removal Manchester"
         description="Call, WhatsApp or email WasteWiz for fast waste removal across Manchester & Greater Manchester. Free quotes, same-day service available."
         canonical="/contact"
         keywords="contact waste removal Manchester, WasteWiz phone, rubbish clearance Greater Manchester contact"

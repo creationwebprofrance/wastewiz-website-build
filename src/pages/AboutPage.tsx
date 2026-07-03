@@ -24,7 +24,7 @@ export default function AboutPage() {
   return (
     <>
       <SEO
-        title="About WasteWiz | Waste Removal Manchester & Greater Manchester"
+        title="About WasteWiz | Waste Removal Manchester"
         description="Family-run waste removal team serving Manchester & Greater Manchester. Licensed carriers recycling up to 90% of waste. Learn about WasteWiz."
         canonical="/about"
         keywords="about WasteWiz, waste removal Manchester company, Greater Manchester rubbish clearance team"
@@ -97,7 +97,7 @@ export default function AboutPage() {
                 <p className="text-4xl md:text-5xl font-heading font-bold text-secondary">
                   {stat.value}
                 </p>
-                <p className="text-white/80 mt-2">{stat.label}</p>
+                <p className="text-white/90 mt-2">{stat.label}</p>
               </div>
             ))}
           </div>

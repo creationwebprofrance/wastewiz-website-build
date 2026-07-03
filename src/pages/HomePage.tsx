@@ -48,8 +48,8 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title="Waste Removal Manchester | WasteWiz – Greater Manchester Rubbish Clearance"
-        description="Same-day waste removal in Manchester & Greater Manchester. Rubbish, house, garden & office clearance by licensed waste carriers. Get a free quote from WasteWiz."
+        title="Waste Removal Manchester | WasteWiz Clearance"
+        description="Same-day waste removal in Manchester & Greater Manchester. Rubbish, house, garden & office clearance by licensed carriers. Free quotes."
         canonical="/"
         keywords="waste removal Manchester, waste Manchester, waste Greater Manchester, rubbish removal Manchester, rubbish clearance Greater Manchester, house clearance Manchester, garden clearance Manchester"
         jsonLd={{
@@ -79,7 +79,7 @@ export default function HomePage() {
                 Waste Removal in Manchester &amp; Greater Manchester
               </h1>
               
-              <p className="text-xl text-primary-foreground/80 max-w-lg">
+              <p className="text-xl text-primary-foreground/90 max-w-lg">
                 Professional clearance solutions for homes and businesses across Greater Manchester. 
                 Same-day service available.
               </p>
@@ -118,6 +118,10 @@ export default function HomePage() {
               <img 
                 src={truckImage}
                 alt="WasteWiz waste removal truck in Greater Manchester"
+                width={1200}
+                height={900}
+                fetchPriority="high"
+                decoding="async"
                 className="block w-full max-w-[760px] lg:max-w-none h-auto max-h-[560px] lg:max-h-[740px] object-contain rounded-[2rem] shadow-strong"
               />
             </div>
@@ -129,8 +133,9 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="py-16 bg-muted relative">
+      <section className="py-16 bg-muted relative" aria-labelledby="features-heading">
         <div className="container">
+          <h2 id="features-heading" className="sr-only">Why choose WasteWiz</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div 
@@ -180,7 +185,7 @@ export default function HomePage() {
                 </h3>
                 <p className="text-muted-foreground mt-2">{service.description}</p>
                 <div className="flex items-center gap-2 mt-4 text-primary font-semibold">
-                  Learn more
+                  <span>Read about {service.name.toLowerCase()}</span>
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-2 transition-transform" />
                 </div>
               </Link>
@@ -204,7 +209,7 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-4xl font-heading font-bold">
                 Transforming Spaces Across Greater Manchester
               </h2>
-              <p className="text-white/80 text-lg">
+              <p className="text-white/90 text-lg">
                 Our team takes pride in delivering exceptional results. See the dramatic 
                 transformations we achieve for our customers every day.
               </p>
@@ -289,7 +294,7 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
             Ready to Clear Your Space?
           </h2>
-          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Get a free, no-obligation quote today. Same-day service available across Greater Manchester.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

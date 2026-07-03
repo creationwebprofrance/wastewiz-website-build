@@ -1,0 +1,20 @@
+# WasteWiz
+
+> WasteWiz is a licensed waste removal and rubbish clearance company serving Manchester and Greater Manchester. Same-day service for house, garden, office and bulky waste clearance.
+
+## Pages
+
+- [Home](/): Waste removal in Manchester & Greater Manchester — services, coverage and free quotes.
+- [About](/about): Family-run team, values, and 90% recycling commitment.
+- [Services](/services): Full list of clearance services offered.
+- [Rubbish Removal](/services/rubbish-removal): General household and commercial waste removal.
+- [House Clearance](/services/house-clearance): Full property clearances for homeowners, landlords and estates.
+- [Garden Clearance](/services/garden-clearance): Green waste, soil and outdoor furniture removal.
+- [Office Clearance](/services/office-clearance): Commercial furniture, equipment and office waste disposal.
+- [Regular Collection](/services/regular-collection): Scheduled waste collection for businesses.
+- [Bulky Items](/services/bulky-items): Furniture, appliances and mattress removal.
+- [Deep Cleaning](/services/deep-cleaning): Post-clearance deep cleaning.
+- [Manchester Recycling Centres Guide](/manchester-recycling-centres): Local tips, opening hours, permits and alternatives.
+- [Gallery](/gallery): Before & after transformations across Greater Manchester.
+- [Contact](/contact): Phone, WhatsApp and email contact details.
+- [Get a Quote](/quote): Free, no-obligation quote request form.

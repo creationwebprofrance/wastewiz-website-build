@@ -224,7 +224,7 @@ export default function ServiceDetailPage() {
           <h2 className="text-3xl font-heading font-bold mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-primary-foreground/90 text-lg mb-8 max-w-xl mx-auto">
             Get your free, no-obligation quote today. We're ready to help with your {service.title.toLowerCase()}.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
