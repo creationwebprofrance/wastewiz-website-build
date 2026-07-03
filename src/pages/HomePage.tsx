@@ -48,8 +48,8 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title="Waste Removal Manchester | WasteWiz – Greater Manchester Rubbish Clearance"
-        description="Same-day waste removal in Manchester & Greater Manchester. Rubbish, house, garden & office clearance by licensed waste carriers. Get a free quote from WasteWiz."
+        title="Waste Removal Manchester | WasteWiz Clearance"
+        description="Same-day waste removal in Manchester & Greater Manchester. Rubbish, house, garden & office clearance by licensed carriers. Free quotes."
         canonical="/"
         keywords="waste removal Manchester, waste Manchester, waste Greater Manchester, rubbish removal Manchester, rubbish clearance Greater Manchester, house clearance Manchester, garden clearance Manchester"
         jsonLd={{
