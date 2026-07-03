@@ -269,7 +269,7 @@ export default function GalleryPage() {
           <h2 className="text-3xl font-heading font-bold mb-4">
             Want Results Like These?
           </h2>
-          <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
             Get your free quote today and let us transform your space.
           </p>
           <Button variant="white" size="lg" asChild>

@@ -79,7 +79,7 @@ export default function HomePage() {
                 Waste Removal in Manchester &amp; Greater Manchester
               </h1>
               
-              <p className="text-xl text-primary-foreground/80 max-w-lg">
+              <p className="text-xl text-primary-foreground/90 max-w-lg">
                 Professional clearance solutions for homes and businesses across Greater Manchester. 
                 Same-day service available.
               </p>
@@ -209,7 +209,7 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-4xl font-heading font-bold">
                 Transforming Spaces Across Greater Manchester
               </h2>
-              <p className="text-white/80 text-lg">
+              <p className="text-white/90 text-lg">
                 Our team takes pride in delivering exceptional results. See the dramatic 
                 transformations we achieve for our customers every day.
               </p>
@@ -294,7 +294,7 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
             Ready to Clear Your Space?
           </h2>
-          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Get a free, no-obligation quote today. Same-day service available across Greater Manchester.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

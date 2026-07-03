@@ -109,7 +109,7 @@ export default function ServicesPage() {
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
             Need a Custom Solution?
           </h2>
-          <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
             Every job is different. Contact us to discuss your specific requirements 
             and get a tailored quote.
           </p>
