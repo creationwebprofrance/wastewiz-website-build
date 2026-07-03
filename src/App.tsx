@@ -15,6 +15,7 @@ import GalleryPage from "@/pages/GalleryPage";
 import ContactPage from "@/pages/ContactPage";
 import QuotePage from "@/pages/QuotePage";
 import AdminGalleryPage from "@/pages/AdminGalleryPage";
+import ManchesterRecyclingCentresPage from "@/pages/ManchesterRecyclingCentresPage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ function AnimatedRoutes() {
         <Route path="/gallery" element={<PageTransition><GalleryPage /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
         <Route path="/quote" element={<PageTransition><QuotePage /></PageTransition>} />
+        <Route path="/manchester-recycling-centres" element={<PageTransition><ManchesterRecyclingCentresPage /></PageTransition>} />
         <Route path="/aE12ad1231a1d5a" element={<PageTransition><AdminGalleryPage /></PageTransition>} />
         <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
       </Routes>
