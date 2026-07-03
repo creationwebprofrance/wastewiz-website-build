@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle, Star, Truck, Leaf, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import truckImage from "@/assets/truck-hero-local.jpg";
-import teamWorkImage from "@/assets/team-work.png";
+import teamWorkImage from "@/assets/team-work.jpg";
 import beforeImage from "@/assets/before-1.jpg";
 import afterImage from "@/assets/after-1.jpg";
 
@@ -235,6 +235,10 @@ export default function HomePage() {
                   <img 
                     src={beforeImage}
                     alt="Property before waste removal in Greater Manchester"
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={600}
                     className="w-full h-64 object-cover"
                   />
                 </div>
@@ -245,6 +249,10 @@ export default function HomePage() {
                   <img 
                     src={afterImage}
                     alt="Property after waste removal in Greater Manchester"
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={600}
                     className="w-full h-64 object-cover"
                   />
                 </div>
