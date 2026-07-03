@@ -185,7 +185,7 @@ export default function HomePage() {
                 </h3>
                 <p className="text-muted-foreground mt-2">{service.description}</p>
                 <div className="flex items-center gap-2 mt-4 text-primary font-semibold">
-                  Learn more
+                  <span>Read about {service.name.toLowerCase()}</span>
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-2 transition-transform" />
                 </div>
               </Link>
