@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 
 import truckImage from "@/assets/truck-3.jpg";
-import teamWorkImage from "@/assets/team-work.png";
+import teamWorkImage from "@/assets/team-work.jpg";
 
 const values = [
   { icon: Users, title: "Customer First", description: "Your satisfaction is our top priority. We go above and beyond to deliver exceptional service." },
