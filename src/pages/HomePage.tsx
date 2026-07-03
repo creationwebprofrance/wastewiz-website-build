@@ -133,8 +133,9 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="py-16 bg-muted relative">
+      <section className="py-16 bg-muted relative" aria-labelledby="features-heading">
         <div className="container">
+          <h2 id="features-heading" className="sr-only">Why choose WasteWiz</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div 
