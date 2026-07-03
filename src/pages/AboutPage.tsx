@@ -24,7 +24,7 @@ export default function AboutPage() {
   return (
     <>
       <SEO
-        title="About WasteWiz | Waste Removal Manchester & Greater Manchester"
+        title="About WasteWiz | Waste Removal Manchester"
         description="Family-run waste removal team serving Manchester & Greater Manchester. Licensed carriers recycling up to 90% of waste. Learn about WasteWiz."
         canonical="/about"
         keywords="about WasteWiz, waste removal Manchester company, Greater Manchester rubbish clearance team"
