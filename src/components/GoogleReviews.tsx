@@ -8,7 +8,7 @@ const GOOGLE_REVIEW_URL =
 // Replace this ID with the one Elfsight gives you after creating the free
 // Google Reviews widget on https://elfsight.com/google-reviews-widget/
 // (Widget code looks like: <div class="elfsight-app-XXXXXXXX-XXXX-...">)
-const ELFSIGHT_WIDGET_ID = "elfsight-app-PLACEHOLDER-REPLACE-ME";
+const ELFSIGHT_WIDGET_ID = "elfsight-app-949ccced-b2fe-420b-b846-ec84655fca88";
 
 interface GoogleReviewsProps {
   variant?: "light" | "dark";
