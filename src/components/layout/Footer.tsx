@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
- import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
+ import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Star } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const services = [
