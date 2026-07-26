@@ -23,26 +23,6 @@ const services = [
   { name: "Bulky Items", description: "Large furniture and appliance removal", href: "/services/bulky-items" },
 ];
 
-const testimonials = [
-  {
-    name: "Sarah M.",
-    location: "Didsbury",
-    rating: 5,
-    text: "Absolutely fantastic service! They cleared our entire house in just one day. Professional, friendly, and reasonably priced.",
-  },
-  {
-    name: "James T.",
-    location: "Sale",
-    rating: 5,
-    text: "Used WasteWiz for a garden clearance. The team was punctual and worked incredibly hard. Highly recommend!",
-  },
-  {
-    name: "Emma K.",
-    location: "Stockport",
-    rating: 5,
-    text: "Quick response, fair pricing, and excellent communication throughout. Will definitely use again.",
-  },
-];
 
 export default function HomePage() {
   return (
