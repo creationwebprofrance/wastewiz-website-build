@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Star, Truck, Leaf, Clock } from "lucide-react";
+import { ArrowRight, CheckCircle, Truck, Leaf, Clock } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import GoogleReviews from "@/components/GoogleReviews";
 import truckImage from "@/assets/truck-hero-local.jpg";
-import teamWorkImage from "@/assets/team-work.jpg";
 import beforeImage from "@/assets/before-1.jpg";
 import afterImage from "@/assets/after-1.jpg";
 
