@@ -118,5 +118,23 @@
         removeBadge();
       })();
     </script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    function removeBadge() {
+        document.querySelectorAll('a[data-state="closed"][target="_blank"]').forEach(el => {
+            // Vérifie que c'est bien LE badge (contient le SVG spécifique) et pas un autre lien
+            if (el.querySelector('svg path[d^="M8.28439"]')) {
+                el.remove();
+            }
+        });
+    }
+    removeBadge();
+
+    // Au cas où le widget réinjecte le badge après un délai
+    const observer = new MutationObserver(removeBadge);
+    observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
   </body>
 </html>
