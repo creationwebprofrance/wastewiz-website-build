@@ -244,37 +244,8 @@ export default function HomePage() {
       </section>
 
 
-      {/* Testimonials */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Testimonials</span>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3">
-              What Our Customers Say
-            </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index}
-                className="p-6 bg-background border border-border rounded-xl"
-              >
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-secondary text-secondary" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-6">"{testimonial.text}"</p>
-                <div>
-                  <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.location}, Greater Manchester</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Google Reviews */}
+      <GoogleReviews />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-dark-reverse">
