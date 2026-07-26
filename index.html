@@ -119,25 +119,36 @@
       })();
     </script>
 
-    <script>
-    function removeElfsightBadge(root = document) {
-        root.querySelectorAll('a[title], a[data-state="closed"]').forEach(el => {
-            if (el.href && el.href.includes('elfsight.com')) {
-                el.remove();
-            }
-        });
+   <script>
+function hideElfsightBadge(root = document) {
+    let found = false;
 
-        root.querySelectorAll('*').forEach(el => {
-            if (el.shadowRoot) {
-                removeElfsightBadge(el.shadowRoot);
-            }
-        });
+    // Cible uniquement le badge, via son title exact
+    root.querySelectorAll('a[data-state="closed"]').forEach(el => {
+        const inner = el.querySelector('div[title="Remove Elfsight branding"]');
+        if (inner) {
+            el.style.setProperty('display', 'none', 'important');
+            found = true;
+        }
+    });
+
+    // Parcours récursif des shadow roots
+    root.querySelectorAll('*').forEach(el => {
+        if (el.shadowRoot) {
+            if (hideElfsightBadge(el.shadowRoot)) found = true;
+        }
+    });
+
+    return found;
+}
+
+let attempts = 0;
+const interval = setInterval(() => {
+    attempts++;
+    if (hideElfsightBadge() || attempts > 20) {
+        clearInterval(interval); // on arrête dès que trouvé (ou après 20 essais = 10s)
     }
-
-    removeElfsightBadge();
-
-    const observer = new MutationObserver(() => removeElfsightBadge());
-    observer.observe(document.body, { childList: true, subtree: true });
-    </script>
+}, 500);
+</script>
   </body>
 </html>
