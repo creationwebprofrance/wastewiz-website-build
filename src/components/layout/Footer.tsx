@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
- import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Star } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
+import GoogleLogo from "@/components/icons/GoogleLogo";
 
 const services = [
   { name: "Rubbish Removal", href: "/services/rubbish-removal" },
@@ -56,13 +57,13 @@ export default function Footer() {
               </a>
             </div>
             <a
-              href="https://search.google.com/local/writereview?placeid=0xdac0c70e888dc1d:0x4dc7dbd4bc1f86f6"
+              href="https://www.google.com/maps/place/Waste+Whiz/@53.4723193,-2.3058626,21473m/data=!3m1!1e3!4m8!3m7!1s0xdac0c70e888dc1d:0x4dc7dbd4bc1f86f6!8m2!3d53.4722454!4d-2.2234628!9m1!1b1!16s%2Fg%2F11njdy_1t0?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-semibold hover:bg-secondary/90 transition-colors"
               aria-label="Leave a Google review for WasteWiz (opens in a new tab)"
             >
-              <Star className="h-4 w-4 fill-current" />
+              <GoogleLogo className="h-4 w-4" />
               Leave a Google Review
             </a>
           </div>
