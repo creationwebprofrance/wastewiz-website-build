@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
- import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
+ import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Star } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const services = [
@@ -55,6 +55,16 @@ export default function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
+            <a
+              href="https://search.google.com/local/writereview?placeid=0xdac0c70e888dc1d:0x4dc7dbd4bc1f86f6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-semibold hover:bg-secondary/90 transition-colors"
+              aria-label="Leave a Google review for WasteWiz (opens in a new tab)"
+            >
+              <Star className="h-4 w-4 fill-current" />
+              Leave a Google Review
+            </a>
           </div>
 
           {/* Services */}

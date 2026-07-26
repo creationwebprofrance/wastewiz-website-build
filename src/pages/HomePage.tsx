@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Star, Truck, Leaf, Clock } from "lucide-react";
+import { ArrowRight, CheckCircle, Truck, Leaf, Clock } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import GoogleReviews from "@/components/GoogleReviews";
 import truckImage from "@/assets/truck-hero-local.jpg";
-import teamWorkImage from "@/assets/team-work.jpg";
 import beforeImage from "@/assets/before-1.jpg";
 import afterImage from "@/assets/after-1.jpg";
 
@@ -23,26 +23,6 @@ const services = [
   { name: "Bulky Items", description: "Large furniture and appliance removal", href: "/services/bulky-items" },
 ];
 
-const testimonials = [
-  {
-    name: "Sarah M.",
-    location: "Didsbury",
-    rating: 5,
-    text: "Absolutely fantastic service! They cleared our entire house in just one day. Professional, friendly, and reasonably priced.",
-  },
-  {
-    name: "James T.",
-    location: "Sale",
-    rating: 5,
-    text: "Used WasteWiz for a garden clearance. The team was punctual and worked incredibly hard. Highly recommend!",
-  },
-  {
-    name: "Emma K.",
-    location: "Stockport",
-    rating: 5,
-    text: "Quick response, fair pricing, and excellent communication throughout. Will definitely use again.",
-  },
-];
 
 export default function HomePage() {
   return (
@@ -264,37 +244,8 @@ export default function HomePage() {
       </section>
 
 
-      {/* Testimonials */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Testimonials</span>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3">
-              What Our Customers Say
-            </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index}
-                className="p-6 bg-background border border-border rounded-xl"
-              >
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-secondary text-secondary" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-6">"{testimonial.text}"</p>
-                <div>
-                  <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.location}, Greater Manchester</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Google Reviews */}
+      <GoogleReviews />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-dark-reverse">
