@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import GoogleLogo from "@/components/icons/GoogleLogo";
 
 const GOOGLE_REVIEW_URL =
-  "https://search.google.com/local/writereview?placeid=0xdac0c70e888dc1d:0x4dc7dbd4bc1f86f6";
+  "https://www.google.com/maps/place/Waste+Whiz/@53.4723193,-2.3058626,21473m/data=!3m1!1e3!4m8!3m7!1s0xdac0c70e888dc1d:0x4dc7dbd4bc1f86f6!8m2!3d53.4722454!4d-2.2234628!9m1!1b1!16s%2Fg%2F11njdy_1t0?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D";
 
 // Replace this ID with the one Elfsight gives you after creating the free
 // Google Reviews widget on https://elfsight.com/google-reviews-widget/
@@ -55,7 +55,7 @@ export default function GoogleReviews({ variant = "light" }: GoogleReviewsProps)
               rel="noopener noreferrer"
               aria-label="Leave a Google review for WasteWiz (opens in a new tab)"
             >
-              <Star className="mr-2 h-5 w-5 fill-current" />
+              <GoogleLogo className="mr-2 h-5 w-5" />
               Leave a Google Review
             </a>
           </Button>
