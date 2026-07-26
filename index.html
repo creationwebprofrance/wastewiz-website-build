@@ -120,21 +120,24 @@
     </script>
 
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    function removeBadge() {
-        document.querySelectorAll('a[data-state="closed"][target="_blank"]').forEach(el => {
-            // Vérifie que c'est bien LE badge (contient le SVG spécifique) et pas un autre lien
-            if (el.querySelector('svg path[d^="M8.28439"]')) {
+    function removeElfsightBadge(root = document) {
+        root.querySelectorAll('a[title], a[data-state="closed"]').forEach(el => {
+            if (el.href && el.href.includes('elfsight.com')) {
                 el.remove();
             }
         });
-    }
-    removeBadge();
 
-    // Au cas où le widget réinjecte le badge après un délai
-    const observer = new MutationObserver(removeBadge);
+        root.querySelectorAll('*').forEach(el => {
+            if (el.shadowRoot) {
+                removeElfsightBadge(el.shadowRoot);
+            }
+        });
+    }
+
+    removeElfsightBadge();
+
+    const observer = new MutationObserver(() => removeElfsightBadge());
     observer.observe(document.body, { childList: true, subtree: true });
-});
-</script>
+    </script>
   </body>
 </html>
