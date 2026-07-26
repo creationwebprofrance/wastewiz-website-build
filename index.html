@@ -119,36 +119,24 @@
       })();
     </script>
 
-   <script>
+<script>
 function hideElfsightBadge(root = document) {
-    let found = false;
-
-    // Cible uniquement le badge, via son title exact
     root.querySelectorAll('a[data-state="closed"]').forEach(el => {
         const inner = el.querySelector('div[title="Remove Elfsight branding"]');
-        if (inner) {
+        if (inner && el.style.display !== 'none') {
             el.style.setProperty('display', 'none', 'important');
-            found = true;
         }
     });
 
-    // Parcours récursif des shadow roots
     root.querySelectorAll('*').forEach(el => {
         if (el.shadowRoot) {
-            if (hideElfsightBadge(el.shadowRoot)) found = true;
+            hideElfsightBadge(el.shadowRoot);
         }
     });
-
-    return found;
 }
 
-let attempts = 0;
-const interval = setInterval(() => {
-    attempts++;
-    if (hideElfsightBadge() || attempts > 20) {
-        clearInterval(interval); // on arrête dès que trouvé (ou après 20 essais = 10s)
-    }
-}, 500);
+// Tourne en continu, toutes les 500ms, sans jamais s'arrêter
+setInterval(() => hideElfsightBadge(), 500);
 </script>
   </body>
 </html>
