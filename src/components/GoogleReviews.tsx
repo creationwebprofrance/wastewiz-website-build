@@ -42,9 +42,6 @@ export default function GoogleReviews({ variant = "light" }: GoogleReviewsProps)
           >
             What Our Customers Say
           </h2>
-          <p className={`mt-4 ${isDark ? "text-white/80" : "text-muted-foreground"}`}>
-            Real reviews from customers across Greater Manchester, synced live from Google.
-          </p>
         </div>
 
         {/* Elfsight Google Reviews widget (free tier) */}
