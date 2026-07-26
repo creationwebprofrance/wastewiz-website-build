@@ -16,7 +16,7 @@ interface GoogleReviewsProps {
 
 export default function GoogleReviews({ variant = "light" }: GoogleReviewsProps) {
   useEffect(() => {
-    const SRC = "https://static.elfsight.com/platform/platform.js";
+    const SRC = "https://elfsightcdn.com/platform.js";
     if (document.querySelector(`script[src="${SRC}"]`)) return;
     const s = document.createElement("script");
     s.src = SRC;
