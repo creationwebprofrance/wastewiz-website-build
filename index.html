@@ -104,5 +104,19 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function () {
+        function removeBadge() {
+          document.querySelectorAll('a[data-state]').forEach(function (el) {
+            if (el.style.borderRadius === '40px' || el.innerHTML.includes('svg')) {
+              el.remove();
+            }
+          });
+        }
+        var observer = new MutationObserver(removeBadge);
+        observer.observe(document.body, { childList: true, subtree: true });
+        removeBadge();
+      })();
+    </script>
   </body>
 </html>

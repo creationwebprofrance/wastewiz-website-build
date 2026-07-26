@@ -253,7 +253,9 @@
 iframe[src="lovable"],
 a[href="lovable"],
 aside[id="lovable-badge"],
-div[id="root"] > aside[id="lovable-badge"] {
+div[id="root"] > aside[id="lovable-badge"],
+a[data-state][style*="border-radius:40px"],
+a[data-state][style*="border-radius: 40px"] {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
