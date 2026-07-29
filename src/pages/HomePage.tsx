@@ -89,38 +89,17 @@ export default function HomePage() {
             </div>
             
             <div className="relative animate-fade-up min-w-0">
-              <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                <div className="space-y-2">
-                  <div className="rounded-2xl overflow-hidden shadow-strong ring-1 ring-white/10">
-                    <img
-                      src={beforeImage}
-                      alt="Front garden full of rubbish before clearance in Greater Manchester"
-                      width={800}
-                      height={600}
-                      fetchPriority="high"
-                      decoding="async"
-                      className="w-full h-56 sm:h-72 lg:h-[420px] object-cover"
-                    />
-                  </div>
-                  <p className="text-center text-sm font-semibold text-secondary tracking-widest">BEFORE</p>
-                </div>
-                <div className="space-y-2">
-                  <div className="rounded-2xl overflow-hidden shadow-strong ring-1 ring-white/10">
-                    <img
-                      src={afterImage}
-                      alt="Clean front garden after WasteWiz waste clearance in Greater Manchester"
-                      width={800}
-                      height={600}
-                      fetchPriority="high"
-                      decoding="async"
-                      className="w-full h-56 sm:h-72 lg:h-[420px] object-cover"
-                    />
-                  </div>
-                  <p className="text-center text-sm font-semibold text-secondary tracking-widest">AFTER</p>
-                </div>
-              </div>
+              <BeforeAfterSlider
+                before={beforeImage}
+                after={afterImage}
+                beforeAlt="Front garden full of rubbish before clearance in Greater Manchester"
+                afterAlt="Clean front garden after WasteWiz waste clearance in Greater Manchester"
+                className="h-72 sm:h-96 lg:h-[520px] shadow-strong"
+                priority
+              />
             </div>
           </div>
+        </div>
         </div>
 
         {/* Smooth fade to next section */}
