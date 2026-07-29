@@ -124,8 +124,7 @@
 <script>
 function hideElfsightBadge(root = document) {
     root.querySelectorAll('a[data-state="closed"]').forEach(el => {
-        const inner = el.querySelector('div[title="Remove Elfsight branding"]');
-        if (inner && el.style.display !== 'none') {
+        if (el.style.display !== 'none') {
             el.style.setProperty('display', 'none', 'important');
         }
     });
@@ -137,8 +136,7 @@ function hideElfsightBadge(root = document) {
     });
 }
 
-// Tourne en continu, toutes les 500ms, sans jamais s'arrêter
-setInterval(() => hideElfsightBadge(), 500);
+setInterval(() => hideElfsightBadge(), 300);
 </script>
   </body>
 </html>
