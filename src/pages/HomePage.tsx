@@ -87,50 +87,48 @@ export default function HomePage() {
               </div>
             </div>
             
-            <div className="relative flex items-center justify-center lg:justify-end animate-fade-up min-w-0">
-              <img 
-                src={truckImage}
-                alt="WasteWiz waste removal truck in Greater Manchester"
-                width={1200}
-                height={900}
-                fetchPriority="high"
-                decoding="async"
-                className="block w-full max-w-[760px] lg:max-w-none h-auto max-h-[560px] lg:max-h-[740px] object-contain rounded-[2rem] shadow-strong"
-              />
+            <div className="relative animate-fade-up min-w-0">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                <div className="space-y-2">
+                  <div className="rounded-2xl overflow-hidden shadow-strong ring-1 ring-white/10">
+                    <img
+                      src={beforeImage}
+                      alt="Front garden full of rubbish before clearance in Greater Manchester"
+                      width={800}
+                      height={600}
+                      fetchPriority="high"
+                      decoding="async"
+                      className="w-full h-56 sm:h-72 lg:h-[420px] object-cover"
+                    />
+                  </div>
+                  <p className="text-center text-sm font-semibold text-secondary tracking-widest">BEFORE</p>
+                </div>
+                <div className="space-y-2">
+                  <div className="rounded-2xl overflow-hidden shadow-strong ring-1 ring-white/10">
+                    <img
+                      src={afterImage}
+                      alt="Clean front garden after WasteWiz waste clearance in Greater Manchester"
+                      width={800}
+                      height={600}
+                      fetchPriority="high"
+                      decoding="async"
+                      className="w-full h-56 sm:h-72 lg:h-[420px] object-cover"
+                    />
+                  </div>
+                  <p className="text-center text-sm font-semibold text-secondary tracking-widest">AFTER</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        
-        {/* Smooth fade to muted section */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-primary/20 to-muted" />
+
+        {/* Smooth fade to next section */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-primary/20 to-background" />
       </section>
 
-      {/* Features */}
-      <section className="py-16 bg-muted relative" aria-labelledby="features-heading">
-        <div className="container">
-          <h2 id="features-heading" className="sr-only">Why choose WasteWiz</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div 
-                key={feature.title}
-                className="flex items-center gap-4 p-6 bg-background rounded-xl shadow-soft"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <feature.icon className="h-7 w-7 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-heading font-bold text-lg">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm">{feature.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        {/* Smooth fade to white section */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-background" />
-      </section>
+      {/* Google Reviews (moved to 2nd position) */}
+      <GoogleReviews />
+
 
       {/* Services */}
       <section className="py-20 bg-background relative">
