@@ -100,7 +100,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        </div>
 
         {/* Smooth fade to next section */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-primary/20 to-background" />
