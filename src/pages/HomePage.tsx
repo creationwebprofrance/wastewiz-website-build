@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import GoogleReviews from "@/components/GoogleReviews";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import beforeImage from "@/assets/before-3.jpg";
 import afterImage from "@/assets/after-3.jpg";
 
