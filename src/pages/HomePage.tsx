@@ -1,18 +1,11 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Truck, Leaf, Clock } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import GoogleReviews from "@/components/GoogleReviews";
-import truckImage from "@/assets/truck-hero-local.jpg";
-import beforeImage from "@/assets/before-1.jpg";
-import afterImage from "@/assets/after-1.jpg";
-
-const features = [
-  { icon: Clock, title: "Same-Day Service", description: "Quick response when you need it most" },
-  { icon: Truck, title: "Fully Licensed", description: "Licensed waste carriers you can trust" },
-  { icon: Leaf, title: "Eco-Friendly", description: "90% of waste recycled responsibly" },
-];
+import beforeImage from "@/assets/before-3.jpg";
+import afterImage from "@/assets/after-3.jpg";
 
 const services = [
   { name: "Rubbish Removal", description: "General household and commercial waste", href: "/services/rubbish-removal" },
