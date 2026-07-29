@@ -1,18 +1,11 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Truck, Leaf, Clock } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import GoogleReviews from "@/components/GoogleReviews";
-import truckImage from "@/assets/truck-hero-local.jpg";
-import beforeImage from "@/assets/before-1.jpg";
-import afterImage from "@/assets/after-1.jpg";
-
-const features = [
-  { icon: Clock, title: "Same-Day Service", description: "Quick response when you need it most" },
-  { icon: Truck, title: "Fully Licensed", description: "Licensed waste carriers you can trust" },
-  { icon: Leaf, title: "Eco-Friendly", description: "90% of waste recycled responsibly" },
-];
+import beforeImage from "@/assets/before-3.jpg";
+import afterImage from "@/assets/after-3.jpg";
 
 const services = [
   { name: "Rubbish Removal", description: "General household and commercial waste", href: "/services/rubbish-removal" },
@@ -94,50 +87,48 @@ export default function HomePage() {
               </div>
             </div>
             
-            <div className="relative flex items-center justify-center lg:justify-end animate-fade-up min-w-0">
-              <img 
-                src={truckImage}
-                alt="WasteWiz waste removal truck in Greater Manchester"
-                width={1200}
-                height={900}
-                fetchPriority="high"
-                decoding="async"
-                className="block w-full max-w-[760px] lg:max-w-none h-auto max-h-[560px] lg:max-h-[740px] object-contain rounded-[2rem] shadow-strong"
-              />
+            <div className="relative animate-fade-up min-w-0">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                <div className="space-y-2">
+                  <div className="rounded-2xl overflow-hidden shadow-strong ring-1 ring-white/10">
+                    <img
+                      src={beforeImage}
+                      alt="Front garden full of rubbish before clearance in Greater Manchester"
+                      width={800}
+                      height={600}
+                      fetchPriority="high"
+                      decoding="async"
+                      className="w-full h-56 sm:h-72 lg:h-[420px] object-cover"
+                    />
+                  </div>
+                  <p className="text-center text-sm font-semibold text-secondary tracking-widest">BEFORE</p>
+                </div>
+                <div className="space-y-2">
+                  <div className="rounded-2xl overflow-hidden shadow-strong ring-1 ring-white/10">
+                    <img
+                      src={afterImage}
+                      alt="Clean front garden after WasteWiz waste clearance in Greater Manchester"
+                      width={800}
+                      height={600}
+                      fetchPriority="high"
+                      decoding="async"
+                      className="w-full h-56 sm:h-72 lg:h-[420px] object-cover"
+                    />
+                  </div>
+                  <p className="text-center text-sm font-semibold text-secondary tracking-widest">AFTER</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        
-        {/* Smooth fade to muted section */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-primary/20 to-muted" />
+
+        {/* Smooth fade to next section */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-primary/20 to-background" />
       </section>
 
-      {/* Features */}
-      <section className="py-16 bg-muted relative" aria-labelledby="features-heading">
-        <div className="container">
-          <h2 id="features-heading" className="sr-only">Why choose WasteWiz</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div 
-                key={feature.title}
-                className="flex items-center gap-4 p-6 bg-background rounded-xl shadow-soft"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <feature.icon className="h-7 w-7 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-heading font-bold text-lg">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm">{feature.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        {/* Smooth fade to white section */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-background" />
-      </section>
+      {/* Google Reviews (moved to 2nd position) */}
+      <GoogleReviews />
+
 
       {/* Services */}
       <section className="py-20 bg-background relative">
@@ -180,72 +171,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Before/After Preview */}
-      <section className="py-20 bg-gradient-dark text-white relative">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <span className="text-secondary font-semibold uppercase tracking-wider text-sm">See The Results</span>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold">
-                Transforming Spaces Across Greater Manchester
-              </h2>
-              <p className="text-white/90 text-lg">
-                Our team takes pride in delivering exceptional results. See the dramatic 
-                transformations we achieve for our customers every day.
-              </p>
-              <ul className="space-y-3">
-                {["Complete property clearances", "Garden transformations", "Office and commercial spaces", "Same-day turnaround available"].map((item) => (
-                  <li key={item} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button variant="white" size="lg" asChild>
-                <Link to="/gallery">
-                  View Full Gallery
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <div className="rounded-xl overflow-hidden">
-                  <img 
-                    src={beforeImage}
-                    alt="Property before waste removal in Greater Manchester"
-                    loading="lazy"
-                    decoding="async"
-                    width={800}
-                    height={600}
-                    className="w-full h-64 object-cover"
-                  />
-                </div>
-                <p className="text-center text-sm font-semibold text-secondary">BEFORE</p>
-              </div>
-              <div className="space-y-2">
-                <div className="rounded-xl overflow-hidden">
-                  <img 
-                    src={afterImage}
-                    alt="Property after waste removal in Greater Manchester"
-                    loading="lazy"
-                    decoding="async"
-                    width={800}
-                    height={600}
-                    className="w-full h-64 object-cover"
-                  />
-                </div>
-                <p className="text-center text-sm font-semibold text-secondary">AFTER</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* Google Reviews */}
-      <GoogleReviews />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-dark-reverse">
