@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en-GB">
   <head>
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png">
     <meta name="google-site-verification" content="_ZVz-ClDcPaaDEyagztMiVkpNSqye5sZXBdKuGY0n6M" />
@@ -137,9 +139,6 @@ function hideElfsightBadge(root = document) {
 
 // Tourne en continu, toutes les 500ms, sans jamais s'arrêter
 setInterval(() => hideElfsightBadge(), 500);
-</script>
-  <script>
-alert('Script chargé, badge trouvé: ' + document.querySelectorAll('a[data-state="closed"]').length);
 </script>
   </body>
 </html>
