@@ -46,7 +46,7 @@ export default function HomePage() {
             <div className="relative z-10 text-primary-foreground space-y-8 animate-fade-up min-w-0">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-background/20">
                 <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-                <span className="text-sm font-medium">Greater Manchester's Trusted Waste Removal</span>
+                <span className="text-sm font-medium">Serving Manchester & Greater Manchester only</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
@@ -54,7 +54,7 @@ export default function HomePage() {
               </h1>
               
               <p className="text-xl text-primary-foreground/90 max-w-lg">
-                Professional clearance solutions for homes and businesses across Greater Manchester. 
+                Professional clearance solutions <strong className="text-secondary font-semibold">only</strong> in Manchester & Greater Manchester.
                 Same-day service available.
               </p>
               
