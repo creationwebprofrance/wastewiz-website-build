@@ -54,7 +54,7 @@ export default function HomePage() {
               </h1>
               
               <p className="text-xl text-primary-foreground/90 max-w-lg">
-                Professional clearance solutions for homes and businesses across Greater Manchester. 
+                Professional clearance solutions <strong className="text-secondary font-semibold">only</strong> in Manchester & Greater Manchester.
                 Same-day service available.
               </p>
               
