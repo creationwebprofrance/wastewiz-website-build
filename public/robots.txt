@@ -16,4 +16,4 @@ User-agent: *
 Allow: /
 Disallow: /aE12ad1231a1d5a
 
-Sitemap: https://waste-wiz-green-growth.lovable.app/sitemap.xml
+Sitemap: https://wastewhizrubbishclearance.co.uk/sitemap.xml
