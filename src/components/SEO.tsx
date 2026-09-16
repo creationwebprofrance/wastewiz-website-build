@@ -8,7 +8,7 @@ type SEOProps = {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 };
 
-const SITE_URL = "https://wastewiz.co.uk";
+const SITE_URL = "https://wastewhizrubbishclearance.co.uk";
 
 function setMeta(attr: "name" | "property", key: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`);
@@ -46,6 +46,9 @@ export default function SEO({ title, description, canonical, keywords, jsonLd }:
     setMeta("name", "twitter:title", title);
     setMeta("name", "twitter:description", description);
     setMeta("name", "twitter:card", "summary_large_image");
+    setMeta("property", "og:image", `${SITE_URL}/og-image.png`);
+    setMeta("name", "twitter:image", `${SITE_URL}/og-image.png`);
+
 
     // route-scoped JSON-LD
     const scriptId = "route-jsonld";
