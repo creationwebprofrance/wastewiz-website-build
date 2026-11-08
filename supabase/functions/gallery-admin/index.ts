@@ -66,6 +66,7 @@ function hasExpectedImageSignature(bytes: Uint8Array, ext: string): boolean {
 async function validateImageFile(file: File): Promise<{ ext: string; bytes: Uint8Array; contentType: string } | null> {
   const ext = getAllowedImageExtension(file);
   if (!ext) return null;
+  if (file.size <= 0 || file.size > 10 * 1024 * 1024) return null;
 
   const bytes = new Uint8Array(await file.arrayBuffer());
   if (!hasExpectedImageSignature(bytes, ext)) return null;
